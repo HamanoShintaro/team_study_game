@@ -87,7 +87,7 @@ namespace touch_game
         public IEnumerator GameStart()
         {
             yield return new WaitForSeconds(ReadyText.spanTime * 5);
-            this.bgmController.StartGameBgm();
+            this.bgmController.StartGameBgm(1);
             this.voiceController.playVoiceStart();
             this.Spawner.spawnFlg = true;
 
