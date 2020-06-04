@@ -11,18 +11,7 @@ namespace touch_game
 
         // AudioClipの宣言
         public AudioClip title;
-        public AudioClip stage0101;
-        public AudioClip stage0102;
-        public AudioClip stage0201;
-        public AudioClip stage0202;
-        public AudioClip stage0301;
-        public AudioClip stage0302;
-        public AudioClip stage0401;
-        public AudioClip stage0402;
-        public AudioClip stage0501;
-        public AudioClip stage0502;
-        public AudioClip stage0601;
-        public AudioClip stage0602;
+        public AudioClip stage0101, stage0102, stage0201, stage0202, stage0301, stage0302, stage0401, stage0402, stage0501, stage0502, stage0601, stage0602;
 
         private Dictionary<int, AudioClip> stageBGM;
 

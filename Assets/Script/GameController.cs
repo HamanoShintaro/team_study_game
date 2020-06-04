@@ -25,6 +25,7 @@ namespace touch_game
         //音響用インスタンス
         public BgmController bgmController;
         public VoiceController voiceController;
+        public SeController seController;
 
         private void Awake()
         {

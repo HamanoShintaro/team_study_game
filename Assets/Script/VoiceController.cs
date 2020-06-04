@@ -10,6 +10,11 @@ namespace touch_game
         //宣言
         public AudioSource voiceController;
 
+        //ジャンプの時の声
+        public AudioClip jump01, jump02, jump03, jump04, jump05, jump06;
+        private Dictionary<int, AudioClip> jump;
+
+
         //動物の名前
         public AudioClip dog, cat, penguin, lion, ladybug, dinosaur;
         public AudioClip dog_man, cat_man, penguin_man, lion_man, ladybug_man, dinosaur_man;
@@ -37,8 +42,19 @@ namespace touch_game
 
         public void resetVoice()
         {
+            // ジャンプした時の声の設定
+            jump = new Dictionary<int, AudioClip>{
+                {1, jump01},
+                {2, jump02},
+                {3, jump03},
+                {4, jump04},
+                {5, jump05},
+                {6, jump06},
+            };
+
+
             //男女抽選
-            if(Random.Range(0.0f,1.0f) < 0.2f)
+            if (Random.Range(0.0f,1.0f) < 0.2f)
             {
                 manFlg = true;
             }
@@ -133,6 +149,8 @@ namespace touch_game
         public void playVoiceAnimals(string animal) {
             voiceController.PlayOneShot(animalNames[animal]);
         }
+
+        public void playVoiceJump(int level) { voiceController.PlayOneShot(jump[level]); }
 
         void Start()
         {
