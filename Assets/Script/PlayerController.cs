@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,13 +25,17 @@ namespace touch_game
         public Sprite jump00;
         private Dictionary<int, Sprite> running;
 
+        // ジャンプ判定用フラグ
+        private bool jumpFlg;
+
 
         // Start is called before the first frame update
         void Start()
         {
             playerImage = GetComponent<Image>();
-            initPosition = new Vector3(30.0f, 30.0f, 0.0f);
-            playerImage.transform.position = initPosition;
+            initPosition = new Vector3(50.0f, 30.0f, 0.0f);
+            playerImage.transform.position = new Vector3(50.0f, 300.0f, 0.0f);
+            jumpFlg = true;
             velocity = 0.0f;
             InitPlayer();
         }
@@ -47,13 +52,20 @@ namespace touch_game
             this.StartCoroutine(this.runnningMotion());
         }
 
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (jumpFlg == true) { jumpFlg = false; }
+        }
 
+        void OnTriggerExit2D(Collider2D other) {
+            if (jumpFlg == false) { jumpFlg = true; }
+        }
 
         // Update is called once per frame
         void Update()
         {
 
-            if (playerImage.transform.position.y <= initPosition.y)
+            if (jumpFlg == false)
             {
 
 
@@ -64,6 +76,7 @@ namespace touch_game
                 
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    jumpFlg = true;
                     Debug.Log("ジャンプします");
                     velocity = jump;
                     GameController.instance.voiceController.playVoiceJump(1);
@@ -72,7 +85,7 @@ namespace touch_game
                     this.StartCoroutine(this.randingEvent());
                 }
             }
-            else if (playerImage.transform.position.y > initPosition.y)
+            else if (jumpFlg == true)
             {
                 velocity = velocity - gravity * Time.deltaTime;
                 if (timeRunningMotion > 0.0f) { timeRunningMotion = 0.0f;  }
@@ -84,7 +97,7 @@ namespace touch_game
         public IEnumerator randingEvent()
         {
             yield return new WaitForSeconds(0.1f);
-            while (playerImage.transform.position.y > initPosition.y)
+            while (jumpFlg == true)
             {
                 yield return new WaitForSeconds(0.02f);
             }
@@ -96,7 +109,7 @@ namespace touch_game
             int runLevel = 0;
 
             while (true) {
-                while (playerImage.transform.position.y <= initPosition.y)
+                while (jumpFlg == false)
                 {
                     playerImage.sprite = running[runLevel];
                     if (runLevel == 15) { runLevel = 0; } else { runLevel += 1; }
