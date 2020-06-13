@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class Background : MonoBehaviour
@@ -10,7 +11,7 @@ public class Background : MonoBehaviour
 
     public Image background;
     public Image opposedBackground;
-    public Image mainPanel;
+    public Image mainPanesl;
 
     private Vector3 initPosition;
     private Vector3 initPositionSub;
