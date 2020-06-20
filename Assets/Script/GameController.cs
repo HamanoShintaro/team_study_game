@@ -21,6 +21,8 @@ namespace touch_game
         public Dictionary<string, int> Counter;
         public GameObject pictureBookObj;
         public PictureBook pictureBook;
+        public GameObject playGameObj;
+        public PlayGame playGame;
 
         //音響用インスタンス
         public BgmController bgmController;
@@ -77,6 +79,8 @@ namespace touch_game
             this.background_sub.scrollFlg = false;
             this.StartCoroutine(this.FullfillTime());
             this.StartCoroutine(this.GameStart());
+            this.playGameObj.SetActive(true);
+            this.playGame.displayFlg = true;
         }
 
         public void ClickPictureBook()
