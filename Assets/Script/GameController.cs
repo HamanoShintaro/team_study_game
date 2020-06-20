@@ -23,7 +23,6 @@ namespace touch_game
         public PictureBook pictureBook;
         public GameObject playGameObj;
         public PlayGame playGame;
-        public MainStage mainStage;
 
         //音響用インスタンス
         public BgmController bgmController;
@@ -63,21 +62,18 @@ namespace touch_game
             this.voiceController.playVoiceTitle();
             this.bgmController.StartTitleBgm();
             this.Spawner.spawnFlg = false;
-            this.StartMenu.gameObject.SetActive(true);
-            //this.StartMenu.displayFlg = true;
+            this.StartMenu.displayFlg = true;
             this.background.scrollFlg = true;
             this.background_sub.scrollFlg = true;
             this.result.displayFlg = false;
             this.resultObj.SetActive(false);
             this.pictureBookObj.SetActive(false);
-            this.mainStage.gameObject.SetActive(false);
         }
 
         public void ClickStart()
         {
             this.bgmController.StopBgm();
-            //this.StartMenu.displayFlg = false;
-            this.StartMenu.gameObject.SetActive(false);
+            this.StartMenu.displayFlg = false;
             this.ReadyText.displayFlg = true;
             this.background.scrollFlg = false;
             this.background_sub.scrollFlg = false;
@@ -89,7 +85,7 @@ namespace touch_game
 
         public void ClickPictureBook()
         {
-            //this.StartMenu.displayFlg = false;
+            this.StartMenu.displayFlg = false;
             callPictureBook();
         }
 
