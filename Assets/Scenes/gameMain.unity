@@ -1609,6 +1609,8 @@ MonoBehaviour:
   result: {fileID: 650671474}
   pictureBookObj: {fileID: 1350758695}
   pictureBook: {fileID: 1350758700}
+  playGameObj: {fileID: 0}
+  playGame: {fileID: 0}
   bgmController: {fileID: 105086706}
   voiceController: {fileID: 1451571360}
   seController: {fileID: 1840322738}
@@ -4896,6 +4898,8 @@ MonoBehaviour:
   MileageText: 
   Image1: {fileID: 21300000, guid: a870639d6c1c4ee45b383d16037f6af5, type: 3}
   Image2: {fileID: 21300000, guid: c4f2575afd8e8494694cf985d876348d, type: 3}
+  Evolution1: 10m
+  Evolution2: 25m
 --- !u!222 &1645673484
 CanvasRenderer:
   m_ObjectHideFlags: 0

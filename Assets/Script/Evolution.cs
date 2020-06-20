@@ -14,6 +14,8 @@ public class Evolution : MonoBehaviour
     public String MileageText;
     public Sprite Image1;
     public Sprite Image2;
+    public String Evolution1;
+    public String Evolution2;
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +30,12 @@ public class Evolution : MonoBehaviour
     {
         MileageText = Mileage.text.ToString();
         
-        if (MileageText == "10m")
+        if (MileageText == Evolution1)
         {
             ImageChange.sprite = Image1;
         }
 
-        if (MileageText == "25m")
+        if (MileageText == Evolution2)
         {
             ImageChange.sprite = Image2;
             WidthAndHeight.x = 200;
