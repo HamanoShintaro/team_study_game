@@ -3477,6 +3477,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartIceBlockField1
       objectReference: {fileID: 0}
+    - target: {fileID: 1351030515025656409, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351030515025656409, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204598924554756253, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: speed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704932669514373610, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704932669514373610, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559205442110255995, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559205442110255995, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231664761531064330, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231664761531064330, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231664761531064330, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5b14e678c3a6aa4aa71b48c5ffc1241, type: 3}
 --- !u!1 &1185621902
@@ -4821,6 +4871,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainIceBlock6
       objectReference: {fileID: 0}
+    - target: {fileID: 1351030515025656409, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351030515025656409, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 2863018878987792124, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
         type: 3}
       propertyPath: m_Name
@@ -4831,10 +4891,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainIceBlock8
       objectReference: {fileID: 0}
+    - target: {fileID: 5204598924554756253, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: speed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704932669514373610, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704932669514373610, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704932669514373610, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559205442110255995, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559205442110255995, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7926991756813838302, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
         type: 3}
       propertyPath: m_Name
       value: MainIceBlock7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231664761531064330, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231664761531064330, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5b14e678c3a6aa4aa71b48c5ffc1241, type: 3}
