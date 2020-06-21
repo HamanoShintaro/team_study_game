@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 866215755014849254}
-  - component: {fileID: 866215755014849241}
+  - component: {fileID: 5204598924554756253}
   m_Layer: 0
-  m_Name: MainIceBlockField
+  m_Name: StartIceBlockField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,10 +37,10 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 640, y: -350}
+  m_AnchoredPosition: {x: 540, y: -350}
   m_SizeDelta: {x: 1280, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &866215755014849241
+--- !u!114 &5204598924554756253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,11 +49,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 866215755014849255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbf1efb232937e046a041b5c9f953448, type: 3}
+  m_Script: {fileID: 11500000, guid: 4448fc748b852ca468604cf0bc8c9b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
-  startPosition: 1660
+  startPosition: 0
   endPosition: -740
 --- !u!1001 &585763386617659729
 PrefabInstance:
