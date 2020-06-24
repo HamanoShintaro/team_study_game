@@ -2139,7 +2139,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 66387f8cd6ebb12428719175a6241de0, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -4123,6 +4123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartIceBlock1
       objectReference: {fileID: 0}
+    - target: {fileID: 1567227079590292426, guid: de9a70a7d7c4d9e43aef39fc78f1cc5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9080316814890812509, guid: de9a70a7d7c4d9e43aef39fc78f1cc5b,
         type: 3}
       propertyPath: m_Enabled
@@ -4476,6 +4481,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StartIceBlockField1
+      objectReference: {fileID: 0}
+    - target: {fileID: 866215755014849255, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1351030515025656409, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
         type: 3}
@@ -7260,6 +7270,7 @@ GameObject:
   - component: {fileID: 1813279949}
   - component: {fileID: 1813279948}
   - component: {fileID: 1813279947}
+  - component: {fileID: 1813279950}
   m_Layer: 5
   m_Name: MainStage
   m_TagString: Untagged
@@ -7359,6 +7370,31 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1813279950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813279945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9d2cea54061bd4ab2baa5be517f19f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite1: {fileID: 6209104111860893427, guid: f6c792573ac1bbb4c968145800438fac, type: 3}
+  sprite2: {fileID: 5041848679817823539, guid: 801631465ea44084b97f4fef301d738f, type: 3}
+  sprite3: {fileID: 3535064252350713169, guid: af1dc9b05b0efbd408a2927f78f5fdbe, type: 3}
+  sprite4: {fileID: 9187510158035663684, guid: 06654ff758ba97240a7d883cc239e771, type: 3}
+  sprite5: {fileID: 7513670200646485125, guid: 2c6ce4f33cec9374fa06df76ad8821b9, type: 3}
+  sprite6: {fileID: 8698306609857226452, guid: f579d1d756a41584c9ebaf1124e7a134, type: 3}
+  spriteList: []
+  minTime: 2
+  maxTime: 5
+  xMinPosition: 1160
+  xMaxPosition: 1160
+  yMinPosition: -140
+  yMaxPosition: 0
 --- !u!1 &1840322737
 GameObject:
   m_ObjectHideFlags: 0
