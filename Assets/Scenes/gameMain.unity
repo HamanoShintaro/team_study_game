@@ -6582,7 +6582,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1813279946}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -7270,7 +7270,6 @@ GameObject:
   - component: {fileID: 1813279949}
   - component: {fileID: 1813279948}
   - component: {fileID: 1813279947}
-  - component: {fileID: 1813279950}
   m_Layer: 5
   m_Name: MainStage
   m_TagString: Untagged
@@ -7301,6 +7300,7 @@ RectTransform:
   - {fileID: 2038540669}
   - {fileID: 2074592626}
   - {fileID: 914057258}
+  - {fileID: 2134157167}
   - {fileID: 1645673482}
   m_Father: {fileID: 741358475}
   m_RootOrder: 6
@@ -7370,31 +7370,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1813279950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813279945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f9d2cea54061bd4ab2baa5be517f19f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite1: {fileID: 6209104111860893427, guid: f6c792573ac1bbb4c968145800438fac, type: 3}
-  sprite2: {fileID: 5041848679817823539, guid: 801631465ea44084b97f4fef301d738f, type: 3}
-  sprite3: {fileID: 3535064252350713169, guid: af1dc9b05b0efbd408a2927f78f5fdbe, type: 3}
-  sprite4: {fileID: 9187510158035663684, guid: 06654ff758ba97240a7d883cc239e771, type: 3}
-  sprite5: {fileID: 7513670200646485125, guid: 2c6ce4f33cec9374fa06df76ad8821b9, type: 3}
-  sprite6: {fileID: 8698306609857226452, guid: f579d1d756a41584c9ebaf1124e7a134, type: 3}
-  spriteList: []
-  minTime: 2
-  maxTime: 5
-  xMinPosition: 1160
-  xMaxPosition: 1160
-  yMinPosition: -140
-  yMaxPosition: 0
 --- !u!1 &1840322737
 GameObject:
   m_ObjectHideFlags: 0
@@ -8248,3 +8223,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb4e5daf43f7054a801e9d808176a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2134157166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134157167}
+  - component: {fileID: 2134157168}
+  m_Layer: 0
+  m_Name: RandomSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2134157167
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134157166}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1813279946}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2134157168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134157166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9d2cea54061bd4ab2baa5be517f19f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite1: {fileID: 6209104111860893427, guid: f6c792573ac1bbb4c968145800438fac, type: 3}
+  sprite2: {fileID: 5041848679817823539, guid: 801631465ea44084b97f4fef301d738f, type: 3}
+  sprite3: {fileID: 3535064252350713169, guid: af1dc9b05b0efbd408a2927f78f5fdbe, type: 3}
+  sprite4: {fileID: 9187510158035663684, guid: 06654ff758ba97240a7d883cc239e771, type: 3}
+  sprite5: {fileID: 7513670200646485125, guid: 2c6ce4f33cec9374fa06df76ad8821b9, type: 3}
+  sprite6: {fileID: 8698306609857226452, guid: f579d1d756a41584c9ebaf1124e7a134, type: 3}
+  spriteList: []
+  minTime: 2
+  maxTime: 5
+  xMinPosition: 1160
+  xMaxPosition: 1160
+  yMinPosition: -200
+  yMaxPosition: -50

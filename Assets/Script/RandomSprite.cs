@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MainStage : MonoBehaviour
+public class RandomSprite : MonoBehaviour
 {
     //床プレハブ
     public GameObject sprite1;
