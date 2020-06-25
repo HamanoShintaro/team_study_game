@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,8 +15,13 @@ namespace touch_game
         private CharacterController characterController;
         private float velocity;
         private Vector3 initPosition;
+        private bool isGround = false;
+
         public float gravity;
+        Rigidbody2D rb2d;
+        int jumpCount = 0;
         public float jump;
+        public GroundCheck ground;
         private float timeRunningMotion;
 
         // 進化段階1用のSpriteの定義
@@ -29,7 +35,8 @@ namespace touch_game
         void Start()
         {
             playerImage = GetComponent<Image>();
-            initPosition = new Vector3(30.0f, 30.0f, 0.0f);
+            rb2d = GetComponent<Rigidbody2D>();
+            initPosition = new Vector3(30.0f, 105.0f, 0.0f);
             playerImage.transform.position = initPosition;
             velocity = 0.0f;
             InitPlayer();
@@ -53,6 +60,9 @@ namespace touch_game
         void Update()
         {
 
+            //接地判定を得る
+            isGround = ground.IsGround();
+
             if (playerImage.transform.position.y <= initPosition.y)
             {
 
@@ -62,10 +72,11 @@ namespace touch_game
                     velocity = 0.0f;
                 }
                 
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)
                 {
-                    Debug.Log("ジャンプします");
+                    //Debug.Log("ジャンプします");
                     velocity = jump;
+                    //jumpCount++;
                     GameController.instance.voiceController.playVoiceJump(1);
                     GameController.instance.seController.playSeJump(1);
                     playerImage.sprite = jump00;
@@ -109,6 +120,6 @@ namespace touch_game
                 yield return new WaitForSeconds(0.05f);
             }
         }
-
+       
     }
 }
