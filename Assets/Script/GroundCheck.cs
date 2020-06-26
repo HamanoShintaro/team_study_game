@@ -31,7 +31,7 @@ public class GroundCheck : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            Debug.Log("何かが判定に入りました");
+            //Debug.Log("何かが判定に入りました");
             isGroundEnter = true;
         }
     }
@@ -40,7 +40,7 @@ public class GroundCheck : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            Debug.Log("何かが判定に入り続けています");
+            //Debug.Log("何かが判定に入り続けています");
             isGroundStay = true;
         }
     }
@@ -49,7 +49,7 @@ public class GroundCheck : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            Debug.Log("何かが判定をでました");
+            //Debug.Log("何かが判定をでました");
             isGroundExit = true;
         }
     }
