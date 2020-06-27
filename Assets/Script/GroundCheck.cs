@@ -53,4 +53,5 @@ public class GroundCheck : MonoBehaviour
             isGroundExit = true;
         }
     }
+    
 }

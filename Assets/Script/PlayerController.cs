@@ -75,6 +75,8 @@ namespace touch_game
                 if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)
                 {
                     //Debug.Log("ジャンプします");
+                    // 落下速度をリセット
+                    rb2d.velocity = Vector2.zero;
                     velocity = jump;
                     //jumpCount++;
                     GameController.instance.voiceController.playVoiceJump(1);
@@ -120,6 +122,26 @@ namespace touch_game
                 yield return new WaitForSeconds(0.05f);
             }
         }
-       
+
+        /* オブジェクト同士の衝突判定 
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.collider.tag == "Ground")
+         {
+             //Debug.Log("地面と接触した！");
+         }
+        }
+
+        void OnCollisionStay2D(Collision2D collision)
+        {
+            //Debug.Log("Collision Stay: " + collision.gameObject.name);
+        }
+
+        void OnCollisionExit2D(Collision2D collision)
+        {
+            //Debug.Log("Collision Exit: " + collision.gameObject.name);
+        }
+        */
+
     }
 }
