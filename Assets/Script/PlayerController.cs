@@ -15,13 +15,11 @@ namespace touch_game
         private CharacterController characterController;
         private float velocity;
         private Vector3 initPosition;
-        private bool isGround = false;
 
         public float gravity;
         Rigidbody2D rb2d;
         int jumpCount = 0;
         public float jump;
-        public GroundCheck ground;
         private float timeRunningMotion;
 
         // 進化段階1用のSpriteの定義
@@ -59,10 +57,6 @@ namespace touch_game
         // Update is called once per frame
         void Update()
         {
-
-            //接地判定を得る
-            isGround = ground.IsGround();
-
             if (playerImage.transform.position.y <= initPosition.y)
             {
 
