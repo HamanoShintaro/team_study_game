@@ -15,10 +15,8 @@ namespace touch_game
         private CharacterController characterController;
         private float velocity;
         private Vector3 initPosition;
-
         public float gravity;
         Rigidbody2D rb2d;
-        int jumpCount = 0;
         public float jump;
         private float timeRunningMotion;
 
@@ -28,6 +26,9 @@ namespace touch_game
         public Sprite jump00;
         private Dictionary<int, Sprite> running;
 
+        // ジャンプ判定用フラグ
+        private bool jumpFlg;
+
 
         // Start is called before the first frame update
         void Start()
@@ -36,6 +37,7 @@ namespace touch_game
             rb2d = GetComponent<Rigidbody2D>();
             initPosition = new Vector3(30.0f, 105.0f, 0.0f);
             playerImage.transform.position = initPosition;
+            jumpFlg = true;
             velocity = 0.0f;
             InitPlayer();
         }
@@ -52,12 +54,28 @@ namespace touch_game
             this.StartCoroutine(this.runnningMotion());
         }
 
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (jumpFlg == true)
+            {
+                //Debug.Log("何かが判定に入りました");
+                jumpFlg = false;
+            }
+        }
 
+        void OnTriggerExit2D(Collider2D other)
+        {
+            if (jumpFlg == false)
+            {
+                //Debug.Log("何かが判定をでました");
+                jumpFlg = true;
+            }
+        }
 
         // Update is called once per frame
         void Update()
         {
-            if (playerImage.transform.position.y <= initPosition.y)
+            if (jumpFlg == false)
             {
 
 
@@ -66,20 +84,20 @@ namespace touch_game
                     velocity = 0.0f;
                 }
                 
-                if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    jumpFlg = true;
                     //Debug.Log("ジャンプします");
                     // 落下速度をリセット
                     rb2d.velocity = Vector2.zero;
                     velocity = jump;
-                    //jumpCount++;
                     GameController.instance.voiceController.playVoiceJump(1);
                     GameController.instance.seController.playSeJump(1);
                     playerImage.sprite = jump00;
                     this.StartCoroutine(this.randingEvent());
                 }
             }
-            else if (playerImage.transform.position.y > initPosition.y)
+            else if (jumpFlg == true)
             {
                 velocity = velocity - gravity * Time.deltaTime;
                 if (timeRunningMotion > 0.0f) { timeRunningMotion = 0.0f;  }
@@ -91,7 +109,7 @@ namespace touch_game
         public IEnumerator randingEvent()
         {
             yield return new WaitForSeconds(0.1f);
-            while (playerImage.transform.position.y > initPosition.y)
+            while (jumpFlg == true)
             {
                 yield return new WaitForSeconds(0.02f);
             }
@@ -103,7 +121,7 @@ namespace touch_game
             int runLevel = 0;
 
             while (true) {
-                while (playerImage.transform.position.y <= initPosition.y)
+                while (jumpFlg == false)
                 {
                     playerImage.sprite = running[runLevel];
                     if (runLevel == 15) { runLevel = 0; } else { runLevel += 1; }
@@ -116,26 +134,6 @@ namespace touch_game
                 yield return new WaitForSeconds(0.05f);
             }
         }
-
-        /* オブジェクト同士の衝突判定 
-        void OnCollisionEnter2D(Collision2D collision)
-        {
-            if (collision.collider.tag == "Ground")
-         {
-             //Debug.Log("地面と接触した！");
-         }
-        }
-
-        void OnCollisionStay2D(Collision2D collision)
-        {
-            //Debug.Log("Collision Stay: " + collision.gameObject.name);
-        }
-
-        void OnCollisionExit2D(Collision2D collision)
-        {
-            //Debug.Log("Collision Exit: " + collision.gameObject.name);
-        }
-        */
 
     }
 }
