@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7244879295069222161}
   - component: {fileID: 7895293266300145047}
   - component: {fileID: 5931932872950776942}
+  - component: {fileID: -664549374480659506}
   m_Layer: 0
   m_Name: sprite6
   m_TagString: Untagged
@@ -90,3 +91,29 @@ MonoBehaviour:
   speed: 100
   startPosition: 0
   endPosition: -740
+--- !u!61 &-664549374480659506
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698306609857226452}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 100, y: 20}
+  m_EdgeRadius: 0
