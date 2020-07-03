@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PenguinRun : MonoBehaviour
+public class MainBackground : MonoBehaviour
 {
     public float speed = 1.0f;
     public float startPosition;
@@ -20,27 +20,25 @@ public class PenguinRun : MonoBehaviour
 
         if (mileage.mileageCount >= mileage.Evo1)
         {
-            speed = 300;
+            speed = 50;
         }
         else if (mileage.mileageCount >= mileage.Evo2)
         {
-            speed = 250;
+            speed = 35;
         }
         else if (mileage.mileageCount >= mileage.Evo3)
         {
-            speed = 200;
+            speed = 25;
         }
     }
 
-    void ScrollEnd() 
+    void ScrollEnd()
     {
-        Destroy(gameObject);
-
         //通り過ぎた分を加味してポジションを再設定
-        //float diff = transform.position.x - endPosition;
-        //Vector3 restartPosition = transform.position;
-        //restartPosition.x = startPosition + diff;
-        //transform.position = restartPosition;
+        float diff = transform.position.x - endPosition;
+        Vector3 restartPosition = transform.position;
+        restartPosition.x = startPosition + diff;
+        transform.position = restartPosition;
 
         //同じゲームオブジェクトにアタッチされているコンポーネントにメッセージを送る
         //SendMessage("OnScrollEnd", SendMessageOptions.DontRequireReceiver);

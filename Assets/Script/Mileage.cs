@@ -7,8 +7,12 @@ using UnityEngine.UI;
 public class Mileage : MonoBehaviour
 {
     public Text MileageText;
-    public int AdditionTime;
-    public float min; 
+    public int mileageCount;
+    public float min;
+    public int Evo1;
+    public int Evo2;
+    public int Evo3;
+    private float mileageCountSpeed = 1.0f;
 
 
     // Start is called before the first frame update
@@ -20,14 +24,27 @@ public class Mileage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MileageText.text = AdditionTime.ToString() + "m";
+        MileageText.text = mileageCount.ToString() + "m";
         min += Time.deltaTime * 4;
 
-        if (min >= 1.0)
+        if (min >= mileageCountSpeed)
         {
-            AdditionTime += 1;
-            Debug.Log(AdditionTime);
+            mileageCount += 1;
+            Debug.Log(mileageCount);
             min = 0;
+        }
+
+        if (mileageCount >= Evo1)
+        {
+            mileageCountSpeed = 0.2f;
+        }
+        else if (mileageCount >= Evo2)
+        {
+            mileageCountSpeed = 0.4f;
+        }
+        else if (mileageCount >= Evo3)
+        {
+            mileageCountSpeed = 0.6f;
         }
     }
 }
