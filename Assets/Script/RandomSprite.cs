@@ -45,7 +45,7 @@ public class RandomSprite : MonoBehaviour
     void Start()
     {
         //時間間隔を決定する
-        interval = 9f;
+        interval = 8f;
 
         //Listに値を格納
         spriteList.Add(sprite1);
