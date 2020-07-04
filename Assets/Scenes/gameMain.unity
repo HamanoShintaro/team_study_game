@@ -8118,40 +8118,9 @@ MonoBehaviour:
   sprite4: {fileID: 9187510158035663684, guid: 06654ff758ba97240a7d883cc239e771, type: 3}
   sprite5: {fileID: 7513670200646485125, guid: 2c6ce4f33cec9374fa06df76ad8821b9, type: 3}
   sprite6: {fileID: 8698306609857226452, guid: f579d1d756a41584c9ebaf1124e7a134, type: 3}
-  sprite7: {fileID: 3095722238698761115, guid: 48b71f3c4a17e7243862d2b82a77f8bf, type: 3}
-  sprite8: {fileID: 5749746798862426100, guid: 22b2950f2a39bed47b96bc20b47028dc, type: 3}
-  sprite9: {fileID: 580344136146021544, guid: 141819cc91f87e34aa3aeaeb36baebea, type: 3}
-  sprite10: {fileID: 5845676694493773940, guid: 0de25722d586be6498ef4bff4d1aac35,
-    type: 3}
-  sprite11: {fileID: 7366226192080082745, guid: feccf6ea4681df34badd09af408f92a5,
-    type: 3}
-  sprite12: {fileID: 5677098211195852395, guid: 44c560cb0ad2536429a07aa55b0272db,
-    type: 3}
-  sprite13: {fileID: 305100194388362450, guid: 558aa7dc31b9e964594e3d00aed01163, type: 3}
-  sprite14: {fileID: 5162101218199662641, guid: d3f48fd673b37db48a430ffc0f85483c,
-    type: 3}
-  sprite15: {fileID: 4654523083396582880, guid: 9eb21162213c3464faae0a00132d943d,
-    type: 3}
-  sprite16: {fileID: 3232060502053469329, guid: ff0cc23da703c1e4c9cdf50de62e6a71,
-    type: 3}
-  sprite17: {fileID: 2310182008119574585, guid: 3999ce7d9ecb41f47a78a37cbe43cf80,
-    type: 3}
-  sprite18: {fileID: 2492031825572489982, guid: 2d141d6824e9c9345a0c4609ade7bc0c,
-    type: 3}
-  sprite19: {fileID: 8972949484965884027, guid: 3001b98f33947af41a34404e82125e38,
-    type: 3}
-  sprite20: {fileID: 1239101553003881310, guid: ddf3a8a77bc8c674ab145a8b2b6c5ec5,
-    type: 3}
-  sprite21: {fileID: 2442912993679647195, guid: ffdf0419197d3ae4991e3882a43f94f1,
-    type: 3}
-  sprite22: {fileID: 556413657352183743, guid: 6664542f5d508814f8e3c220ee623e90, type: 3}
-  sprite23: {fileID: 4790851187899790884, guid: 4fdf8e29540ff5440b8f422143a931f3,
-    type: 3}
-  sprite24: {fileID: 5369489910893560104, guid: 75a6afba8fbbac248a130a64a60958d9,
-    type: 3}
   spriteList: []
   minTime: 2
-  maxTime: 5
+  maxTime: 4
   xMinPosition: 1160
   xMaxPosition: 1160
   yMinPosition: -200

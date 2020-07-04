@@ -9,6 +9,10 @@ public class PenguinRun : MonoBehaviour
     public float endPosition;
     public Mileage mileage;
 
+    void Start()
+    {
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -24,11 +28,11 @@ public class PenguinRun : MonoBehaviour
         }
         else if (mileage.mileageCount >= mileage.Evo2)
         {
-            speed = 250;
+            speed = 225;
         }
         else if (mileage.mileageCount >= mileage.Evo3)
         {
-            speed = 200;
+            speed = 150;
         }
     }
 
@@ -42,5 +46,10 @@ public class PenguinRun : MonoBehaviour
 
         //同じゲームオブジェクトにアタッチされているコンポーネントにメッセージを送る
         SendMessage("OnScrollEnd", SendMessageOptions.DontRequireReceiver);
+    }
+
+    public void setMileage(Mileage mileage)
+    {
+        this.mileage = mileage;
     }
 }

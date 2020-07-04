@@ -14,24 +14,6 @@ public class RandomSprite : MonoBehaviour
     public GameObject sprite4;
     public GameObject sprite5;
     public GameObject sprite6;
-    public GameObject sprite7;
-    public GameObject sprite8;
-    public GameObject sprite9;
-    public GameObject sprite10;
-    public GameObject sprite11;
-    public GameObject sprite12;
-    public GameObject sprite13;
-    public GameObject sprite14;
-    public GameObject sprite15;
-    public GameObject sprite16;
-    public GameObject sprite17;
-    public GameObject sprite18;
-    public GameObject sprite19;
-    public GameObject sprite20;
-    public GameObject sprite21;
-    public GameObject sprite22;
-    public GameObject sprite23;
-    public GameObject sprite24;
     //spriteのリスト
     public List<GameObject> spriteList = new List<GameObject>();
     //リストのインデックス
@@ -63,7 +45,7 @@ public class RandomSprite : MonoBehaviour
     void Start()
     {
         //時間間隔を決定する
-        interval = 9f;
+        interval = 8f;
 
         //Listに値を格納
         spriteList.Add(sprite1);
@@ -72,24 +54,6 @@ public class RandomSprite : MonoBehaviour
         spriteList.Add(sprite4);
         spriteList.Add(sprite5);
         spriteList.Add(sprite6);
-        spriteList.Add(sprite7);
-        spriteList.Add(sprite8);
-        spriteList.Add(sprite9);
-        spriteList.Add(sprite10);
-        spriteList.Add(sprite11);
-        spriteList.Add(sprite12);
-        spriteList.Add(sprite13);
-        spriteList.Add(sprite14);
-        spriteList.Add(sprite15);
-        spriteList.Add(sprite16);
-        spriteList.Add(sprite17);
-        spriteList.Add(sprite18);
-        spriteList.Add(sprite19);
-        spriteList.Add(sprite20);
-        spriteList.Add(sprite21);
-        spriteList.Add(sprite22);
-        spriteList.Add(sprite23);
-        spriteList.Add(sprite24);
     }
 
     // Update is called once per frame
@@ -102,9 +66,11 @@ public class RandomSprite : MonoBehaviour
         if (time > interval)
         {
             //enemyをインスタンス化する(生成する)
-            GameObject enemy = Instantiate(spriteList[randomIndex.Next(spriteListMinIndex, spriteListMaxIndex)], transform);
+            GameObject sprite = Instantiate(spriteList[randomIndex.Next(spriteListMinIndex, spriteListMaxIndex)], transform);
             //生成した敵の位置をランダムに設定する
-            enemy.transform.localPosition = GetRandomPosition();
+            sprite.transform.localPosition = GetRandomPosition();
+            PenguinRun mileageSC = sprite.GetComponent<PenguinRun>();
+            mileageSC.setMileage(mileage);
             //経過時間を初期化して再度時間計測を始める
             time = 0f;
             //次に発生する時間間隔を決定する
@@ -113,21 +79,16 @@ public class RandomSprite : MonoBehaviour
 
         if (mileage.mileageCount >= mileage.Evo1)
         {
-            spriteListMinIndex = 18;
-            spriteListMaxIndex = 24;
             minTime = 0.5f;
             maxTime = 1.5f;
         }
         else if (mileage.mileageCount >= mileage.Evo2)
         {
-            spriteListMinIndex = 12;
-            spriteListMaxIndex = 18;
+            spriteListMaxIndex = 6;
             maxTime = 2.5f;
         }
         else if (mileage.mileageCount >= mileage.Evo3)
         {
-            spriteListMinIndex = 6;
-            spriteListMaxIndex = 9;
             minTime = 1;
             maxTime = 3.5f;
         }
