@@ -38,14 +38,15 @@ public class PenguinRun : MonoBehaviour
 
     void ScrollEnd() 
     {
+        Destroy(gameObject);
         //通り過ぎた分を加味してポジションを再設定
-        float diff = transform.position.x - endPosition;
-        Vector3 restartPosition = transform.position;
-        restartPosition.x = startPosition + diff;
-        transform.position = restartPosition;
+        //float diff = transform.position.x - endPosition;
+        //Vector3 restartPosition = transform.position;
+        //restartPosition.x = startPosition + diff;
+        //transform.position = restartPosition;
 
         //同じゲームオブジェクトにアタッチされているコンポーネントにメッセージを送る
-        SendMessage("OnScrollEnd", SendMessageOptions.DontRequireReceiver);
+       //SendMessage("OnScrollEnd", SendMessageOptions.DontRequireReceiver);
     }
 
     public void setMileage(Mileage mileage)
