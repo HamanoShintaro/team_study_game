@@ -45,7 +45,7 @@ public class RandomSprite : MonoBehaviour
     void Start()
     {
         //時間間隔を決定する
-        interval = 8f;
+        interval = 9f;
 
         //Listに値を格納
         spriteList.Add(sprite1);
@@ -79,17 +79,18 @@ public class RandomSprite : MonoBehaviour
 
         if (mileage.mileageCount >= mileage.Evo1)
         {
-            minTime = 0.5f;
+            minTime = 1.0f;
             maxTime = 1.5f;
         }
         else if (mileage.mileageCount >= mileage.Evo2)
         {
             spriteListMaxIndex = 6;
+            minTime = 1.0f;
             maxTime = 2.5f;
         }
         else if (mileage.mileageCount >= mileage.Evo3)
         {
-            minTime = 1;
+            minTime = 2.5f;
             maxTime = 3.5f;
         }
     }
