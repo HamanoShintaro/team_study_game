@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class MainBackground : MonoBehaviour
 {
-    public float speed = 1.0f;
+    public float speed;
+    public float speedEvo1;
+    public float speedEvo2;
+    public float speedEvo3;
     public float startPosition;
     public float endPosition;
     public Mileage mileage;
@@ -20,15 +23,15 @@ public class MainBackground : MonoBehaviour
 
         if (mileage.mileageCount >= mileage.Evo1)
         {
-            speed = 50;
+            speed = speedEvo1;
         }
         else if (mileage.mileageCount >= mileage.Evo2)
         {
-            speed = 35;
+            speed = speedEvo2;
         }
         else if (mileage.mileageCount >= mileage.Evo3)
         {
-            speed = 25;
+            speed = speedEvo3;
         }
     }
 
