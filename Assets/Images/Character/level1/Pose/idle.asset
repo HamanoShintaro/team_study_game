@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: idle
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: Body
+    localPosition: {x: 0.17715035, y: 1.0846319, z: 0.00041503907}
+    localRotation: {x: 0, y: 0, z: -0.71159834, w: 0.70258653}
+    localScale: {x: 1.2, y: 1.2, z: 1}
+  - path: Body/LegLeft
+    localPosition: {x: 1.7826414, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.2536174, w: 0.9673046}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Body/LegRight
+    localPosition: {x: 1.7911391, y: -0.006525516, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.25618875, w: 0.96662676}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ArmLeft
+    localPosition: {x: 0.76007044, y: 0.7948702, z: 0.00041503907}
+    localRotation: {x: 0, y: 0, z: -0.31861886, w: 0.94788295}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ArmRight
+    localPosition: {x: 0.1356617, y: 0.3974352, z: 0.00041503907}
+    localRotation: {x: 0, y: 0, z: -0.9276265, w: 0.37350935}
+    localScale: {x: 1, y: 1, z: 1}
