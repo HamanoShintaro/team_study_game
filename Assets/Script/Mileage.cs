@@ -30,7 +30,7 @@ public class Mileage : MonoBehaviour
         if (min >= mileageCountSpeed)
         {
             mileageCount += 1;
-            Debug.Log(mileageCount);
+            //Debug.Log(mileageCount);
             min = 0;
         }
 
