@@ -2390,6 +2390,7 @@ MonoBehaviour:
   pictureBook: {fileID: 1350758700}
   playGameObj: {fileID: 0}
   playGame: {fileID: 0}
+  mainStage: {fileID: 1813279951}
   bgmController: {fileID: 105086706}
   voiceController: {fileID: 1451571360}
   seController: {fileID: 1840322738}
@@ -3980,7 +3981,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005974492}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e94fc43344a344c3eb84730adff22712, type: 3}
   m_Name: 
@@ -3995,7 +3996,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005974492}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -6834,9 +6835,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flapVelocity: 370
-  MainStage: {fileID: 1813279945}
-  Result: {fileID: 650671469}
-  jump00: {fileID: 8162913495902660837, guid: 535f40c1f23a7504eb924f34077adc97, type: 3}
+  MainStage: {fileID: 0}
+  Result: {fileID: 0}
 --- !u!70 &1645673489
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6844,7 +6844,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645673481}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -7475,13 +7475,14 @@ GameObject:
   - component: {fileID: 1813279948}
   - component: {fileID: 1813279947}
   - component: {fileID: 1813279950}
+  - component: {fileID: 1813279951}
   m_Layer: 5
   m_Name: MainStage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1813279946
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7588,8 +7589,20 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &1813279951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813279945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0294ae612cb9ae34ea3921f3b7e70973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1840322737
 GameObject:
   m_ObjectHideFlags: 0
