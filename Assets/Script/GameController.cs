@@ -23,6 +23,7 @@ namespace touch_game
         public PictureBook pictureBook;
         public GameObject playGameObj;
         public PlayGame playGame;
+        public MainStage mainStage;
 
         //音響用インスタンス
         public BgmController bgmController;
@@ -36,27 +37,6 @@ namespace touch_game
         // Start is called before the first frame update
         public void Start()
         {
-            // ポイントの初期化
-            Counter = new Dictionary<string, int>
-            {
-                {"dog", 0},
-                {"cat", 0},
-                {"penguin", 0},
-                {"lion", 0},
-                {"ladybug", 0},
-                {"dinosaur", 0}
-            };
-            Debug.Log("スタート処理を行います");
-            //初回処理 ユーザーデータの作成
-            if (PlayerPrefs.HasKey("dog") == false) {
-                Debug.Log("初回起動処理を開始します");
-                PlayerPrefs.SetInt("dog", 0);
-                PlayerPrefs.SetInt("cat", 0);
-                PlayerPrefs.SetInt("penguin", 0);
-                PlayerPrefs.SetInt("lion", 0);
-                PlayerPrefs.SetInt("ladybug", 0);
-                PlayerPrefs.SetInt("dinosaur", 0);
-            }
             //ゲーム環境の設定
             this.voiceController.resetVoice();
             this.voiceController.playVoiceTitle();
@@ -66,6 +46,7 @@ namespace touch_game
             this.result.displayFlg = false;
             this.resultObj.SetActive(false);
             this.pictureBookObj.SetActive(false);
+            this.mainStage.gameObject.SetActive(false);
         }
 
         public void ClickStart()
@@ -75,8 +56,9 @@ namespace touch_game
             this.ReadyText.displayFlg = true;
             this.StartCoroutine(this.FullfillTime());
             this.StartCoroutine(this.GameStart());
-            this.playGameObj.SetActive(true);
-            this.playGame.displayFlg = true;
+            //this.playGameObj.SetActive(true);
+            //this.playGame.displayFlg = true;
+            this.mainStage.gameObject.SetActive(true);
         }
 
         public void ClickPictureBook()

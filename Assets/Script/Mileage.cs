@@ -21,6 +21,12 @@ public class Mileage : MonoBehaviour
         MileageText = GetComponent<Text>();
     }
 
+    private void OnEnable()
+    {
+        mileageCount = 0;
+        MileageText.text = mileageCount.ToString() + "m";
+    }
+
     // Update is called once per frame
     void Update()
     {
