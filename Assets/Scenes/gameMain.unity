@@ -6835,8 +6835,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flapVelocity: 370
-  MainStage: {fileID: 0}
-  Result: {fileID: 0}
+  MainStage: {fileID: 1813279945}
+  Result: {fileID: 650671469}
+  jump00: {fileID: 8162913495902660837, guid: 535f40c1f23a7504eb924f34077adc97, type: 3}
+  running00: {fileID: 21300000, guid: 7e0dd4a938cb7b146b8af07fad3c742b, type: 3}
+  running01: {fileID: 21300000, guid: bed588eb10b4bfe4b86cede5d853a4ea, type: 3}
+  running02: {fileID: 21300000, guid: 085be9c5ae0a86846b58a83591b3fa52, type: 3}
+  running03: {fileID: 21300000, guid: 244917e0429cf7a449b1c3b5b2751548, type: 3}
+  running04: {fileID: 21300000, guid: 7e0dd4a938cb7b146b8af07fad3c742b, type: 3}
+  running05: {fileID: 21300000, guid: 7e0dd4a938cb7b146b8af07fad3c742b, type: 3}
+  running06: {fileID: 21300000, guid: bed588eb10b4bfe4b86cede5d853a4ea, type: 3}
+  running07: {fileID: 21300000, guid: 085be9c5ae0a86846b58a83591b3fa52, type: 3}
+  running08: {fileID: 21300000, guid: 244917e0429cf7a449b1c3b5b2751548, type: 3}
 --- !u!70 &1645673489
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6844,7 +6854,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645673481}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
