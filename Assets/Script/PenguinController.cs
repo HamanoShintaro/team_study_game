@@ -21,6 +21,9 @@ namespace touch_game
 
         // 進化段階1用のSpriteの定義
         public Sprite jump00;
+        public Sprite running00, running01, running02, running03, running04,
+             running05, running06, running07, running08;
+        private Dictionary<int, Sprite> running;
 
         // Start is called before the first frame update
         void Start()
@@ -29,6 +32,7 @@ namespace touch_game
             rb2d = GetComponent<Rigidbody2D>();
             playerImage = GetComponent<Image>();
             jumpFlg = true;
+            InitPlayer();
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -38,6 +42,7 @@ namespace touch_game
                 //Debug.Log("何かが判定に入りました");
                 jumpFlg = false;
                 jumpCount = 0;
+                this.StartCoroutine(this.runnningMotion());
             }
         }
 
@@ -47,6 +52,17 @@ namespace touch_game
             {
                 jumpFlg = true;
             }
+        }
+
+        void InitPlayer()
+        {
+            //モーション用に連想配列へSpriteをセット
+            running = new Dictionary<int, Sprite>{
+                {0, running00}, {1, running01}, {2, running02}, {3, running03},
+                {4, running04}, {5, running03}, {6, running02}, {7, running01},
+                {8, running00}, {9, running05}, {10, running06}, {11, running07},
+                {12, running08}, {13, running07}, {14, running06}, {15, running05}
+            };
         }
 
         // Update is called once per frame
@@ -77,8 +93,25 @@ namespace touch_game
             rb2d.velocity = new Vector2(0.0f, flapVelocity);
             jumpCount++;
             GameController.instance.voiceController.playVoiceJump(1);
-            //GameController.instance.seController.playSeJump(1);
+            GameController.instance.seController.playSeJump(1);
             playerImage.sprite = jump00;
+        }
+
+        public IEnumerator runnningMotion()
+        {
+            int runLevel = 0;
+           
+            while (jumpFlg == false)
+            {
+                playerImage.sprite = running[runLevel];
+                if (runLevel == 15) { runLevel = 0; } else { runLevel += 1; }
+                if (runLevel == 7 || runLevel == 15)
+                {
+                    GameController.instance.seController.playSeRunning(1);
+                }
+                yield return new WaitForSeconds(0.05f);
+            }
+            yield return new WaitForSeconds(0.05f);          
         }
     }
 }

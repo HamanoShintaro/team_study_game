@@ -6834,6 +6834,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flapVelocity: 370
+  MainStage: {fileID: 1813279945}
+  Result: {fileID: 650671469}
+  jump00: {fileID: 8162913495902660837, guid: 535f40c1f23a7504eb924f34077adc97, type: 3}
 --- !u!70 &1645673489
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6841,7 +6844,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645673481}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
