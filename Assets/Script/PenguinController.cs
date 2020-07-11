@@ -5,69 +5,80 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PenguinController : MonoBehaviour
+namespace touch_game
 {
-    //Animator animator;
-    Rigidbody2D rb2d;
-    public float flapVelocity;
-    int jumpCount = 0;
-    public GameObject MainStage;
-    public GameObject Result;
-    //ジャンプ判定用フラグ
-    private bool jumpFlg;
-
-    // Start is called before the first frame update
-    void Start()
+    public class PenguinController : MonoBehaviour
     {
-        //animator = GetComponent<Animator>();
-        rb2d = GetComponent<Rigidbody2D>();
-        jumpFlg = true;
-    }
+        //Animator animator;
+        Rigidbody2D rb2d;
+        private Image playerImage;
+        public float flapVelocity;
+        int jumpCount = 0;
+        public GameObject MainStage;
+        public GameObject Result;
+        //ジャンプ判定用フラグ
+        private bool jumpFlg;
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (jumpFlg == true) 
+        // 進化段階1用のSpriteの定義
+        public Sprite jump00;
+
+        // Start is called before the first frame update
+        void Start()
         {
-            //Debug.Log("何かが判定に入りました");
-            jumpFlg = false;
-            jumpCount = 0;
+            //animator = GetComponent<Animator>();
+            rb2d = GetComponent<Rigidbody2D>();
+            playerImage = GetComponent<Image>();
+            jumpFlg = true;
         }
-    }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (jumpFlg == false)
-        { 
-            jumpFlg = true; 
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)
+        void OnTriggerEnter2D(Collider2D other)
         {
-            flap();
+            if (jumpFlg == true)
+            {
+                //Debug.Log("何かが判定に入りました");
+                jumpFlg = false;
+                jumpCount = 0;
+            }
         }
 
-        if (transform.position.y > -550)
+        void OnTriggerExit2D(Collider2D other)
         {
-            Result.SetActive(false);
-            MainStage.SetActive(true);
+            if (jumpFlg == false)
+            {
+                jumpFlg = true;
+            }
         }
-        else
+
+        // Update is called once per frame
+        void Update()
         {
-            Result.SetActive(true);
-            MainStage.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)
+            {
+                flap();
+            }
+
+            if (transform.position.y > -550)
+            {
+                Result.SetActive(false);
+                MainStage.SetActive(true);
+            }
+            else
+            {
+                Result.SetActive(true);
+                MainStage.SetActive(false);
+            }
+
         }
 
-    }
-
-    void flap()
-    {
-        //落下速度をリセット
-        rb2d.velocity = Vector2.zero;
-        rb2d.velocity = new Vector2(0.0f, flapVelocity);
-        jumpCount++;
+        void flap()
+        {
+            //落下速度をリセット
+            rb2d.velocity = Vector2.zero;
+            rb2d.velocity = new Vector2(0.0f, flapVelocity);
+            jumpCount++;
+            GameController.instance.voiceController.playVoiceJump(1);
+            //GameController.instance.seController.playSeJump(1);
+            playerImage.sprite = jump00;
+        }
     }
 }
