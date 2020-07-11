@@ -11,10 +11,10 @@ public class PenguinController : MonoBehaviour
     Rigidbody2D rb2d;
     public float flapVelocity;
     int jumpCount = 0;
+    public GameObject MainStage;
+    public GameObject Result;
     //ジャンプ判定用フラグ
     private bool jumpFlg;
-    //落下判定用オブジェクトのタグ
-    //string fallCheckerTag = "FallChecker";
 
     // Start is called before the first frame update
     void Start()
@@ -32,15 +32,6 @@ public class PenguinController : MonoBehaviour
             jumpFlg = false;
             jumpCount = 0;
         }
-
-        /*
-        if (other.gameObject.tag == fallCheckerTag)
-        {
-            //相手が落下判定用オブジェクトだった時の処理
-            //すぐに自分を削除
-            //Destroy(this.gameObject);
-        }
-        */
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -58,6 +49,18 @@ public class PenguinController : MonoBehaviour
         {
             flap();
         }
+
+        if (transform.position.y > -550)
+        {
+            Result.SetActive(false);
+            MainStage.SetActive(true);
+        }
+        else
+        {
+            Result.SetActive(true);
+            MainStage.SetActive(false);
+        }
+
     }
 
     void flap()
