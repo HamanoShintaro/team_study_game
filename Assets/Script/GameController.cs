@@ -63,8 +63,6 @@ namespace touch_game
             this.bgmController.StartTitleBgm();
             this.Spawner.spawnFlg = false;
             this.StartMenu.displayFlg = true;
-            this.background.scrollFlg = true;
-            this.background_sub.scrollFlg = true;
             this.result.displayFlg = false;
             this.resultObj.SetActive(false);
             this.pictureBookObj.SetActive(false);
@@ -75,8 +73,6 @@ namespace touch_game
             this.bgmController.StopBgm();
             this.StartMenu.displayFlg = false;
             this.ReadyText.displayFlg = true;
-            this.background.scrollFlg = false;
-            this.background_sub.scrollFlg = false;
             this.StartCoroutine(this.FullfillTime());
             this.StartCoroutine(this.GameStart());
             this.playGameObj.SetActive(true);
