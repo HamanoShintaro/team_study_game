@@ -37,12 +37,8 @@ namespace touch_game
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            if (jumpFlg == true)
-            {
-                //Debug.Log("何かが判定に入りました");
                 jumpFlg = false;
                 jumpCount = 0;
-            }
         }
 
         void OnTriggerExit2D(Collider2D other)
@@ -72,12 +68,7 @@ namespace touch_game
                 flap();
             }
 
-            if (transform.position.y > -550)
-            {
-                Result.SetActive(false);
-                MainStage.SetActive(true);
-            }
-            else
+            if (transform.position.y < -550)
             {
                 Result.SetActive(true);
                 MainStage.SetActive(false);
@@ -94,6 +85,12 @@ namespace touch_game
             GameController.instance.voiceController.playVoiceJump(1);
             GameController.instance.seController.playSeJump(1);
             playerImage.sprite = jump00;
+
+            //空中ジャンプでキャラクターを1回転させる
+            if (jumpCount == 2) {
+                this.StartCoroutine(this.CharacterSpin());
+            }
+
         }
 
         public IEnumerator runnningMotion()
@@ -101,7 +98,7 @@ namespace touch_game
             int runLevel = 0;
             
             while (true) { 
-                while (jumpFlg == false)
+                while (jumpCount == 0)
                 {
                     playerImage.sprite = running[runLevel];
                     if (runLevel == 9) { runLevel = 0; } else { runLevel += 1; }
@@ -113,6 +110,19 @@ namespace touch_game
                 }
                 yield return new WaitForSeconds(0.05f);
             }          
+        }
+
+        private int spinLoopCount;
+        public IEnumerator CharacterSpin() 
+        {
+            //Debug.Log("キャラクターを回転させます");
+            spinLoopCount = 0;
+            while (spinLoopCount < 20) { 
+                
+                transform.Rotate(0, 0, -18.0f);
+                yield return new WaitForSeconds(0.01f);
+                spinLoopCount++;
+            }
         }
     }
 }
