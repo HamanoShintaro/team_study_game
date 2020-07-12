@@ -21,8 +21,8 @@ namespace touch_game
 
         // 進化段階1用のSpriteの定義
         public Sprite jump00;
-        public Sprite running00, running01, running02, running03, running04,
-             running05, running06, running07, running08;
+        public Sprite running01, running02, running03, running04,
+             running05, running06, running07, running08, running09, running10;
         private Dictionary<int, Sprite> running;
 
         // Start is called before the first frame update
@@ -42,7 +42,6 @@ namespace touch_game
                 //Debug.Log("何かが判定に入りました");
                 jumpFlg = false;
                 jumpCount = 0;
-                this.StartCoroutine(this.runnningMotion());
             }
         }
 
@@ -58,11 +57,11 @@ namespace touch_game
         {
             //モーション用に連想配列へSpriteをセット
             running = new Dictionary<int, Sprite>{
-                {0, running00}, {1, running01}, {2, running02}, {3, running03},
-                {4, running04}, {5, running03}, {6, running02}, {7, running01},
-                {8, running00}, {9, running05}, {10, running06}, {11, running07},
-                {12, running08}, {13, running07}, {14, running06}, {15, running05}
+                {0, running01}, {1, running02}, {2, running03}, {3, running04},
+                {4, running05}, {5, running06}, {6, running07}, {7, running08},
+                {8, running09}, {9, running10}
             };
+            this.StartCoroutine(this.runnningMotion());
         }
 
         // Update is called once per frame
@@ -100,18 +99,20 @@ namespace touch_game
         public IEnumerator runnningMotion()
         {
             int runLevel = 0;
-           
-            while (jumpFlg == false)
-            {
-                playerImage.sprite = running[runLevel];
-                if (runLevel == 15) { runLevel = 0; } else { runLevel += 1; }
-                if (runLevel == 7 || runLevel == 15)
+            
+            while (true) { 
+                while (jumpFlg == false)
                 {
-                    GameController.instance.seController.playSeRunning(1);
+                    playerImage.sprite = running[runLevel];
+                    if (runLevel == 9) { runLevel = 0; } else { runLevel += 1; }
+                    if (runLevel == 5 || runLevel == 9)
+                    {
+                        GameController.instance.seController.playSeRunning(1);
+                    }
+                    yield return new WaitForSeconds(0.05f);
                 }
                 yield return new WaitForSeconds(0.05f);
-            }
-            yield return new WaitForSeconds(0.05f);          
+            }          
         }
     }
 }
