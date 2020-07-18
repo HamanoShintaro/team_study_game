@@ -2539,7 +2539,6 @@ MonoBehaviour:
   Spawner: {fileID: 1785577046}
   StartMenu: {fileID: 1005974494}
   ReadyText: {fileID: 975638508}
-  LeastTime: {fileID: 427985121}
   background: {fileID: 0}
   background_sub: {fileID: 0}
   resultObj: {fileID: 650671469}
@@ -3705,7 +3704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &876614259
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4194,7 +4193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1005974493
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4229,7 +4228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94fc43344a344c3eb84730adff22712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayFlg: 0
   startMenu: {fileID: 1005974495}
 --- !u!225 &1005974495
 CanvasGroup:
@@ -4240,7 +4238,7 @@ CanvasGroup:
   m_GameObject: {fileID: 1005974492}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 0
+  m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!222 &1005974497
