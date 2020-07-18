@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Monetization;
 using UnityEngine.UI;
 
 namespace touch_game
@@ -13,7 +14,6 @@ namespace touch_game
         public Spawner Spawner;
         public StartMenu StartMenu;
         public ReadyText ReadyText;
-        public Image LeastTime;
         public Background background;
         public Background background_sub;
         public GameObject resultObj;
@@ -41,9 +41,6 @@ namespace touch_game
             this.voiceController.resetVoice();
             this.voiceController.playVoiceTitle();
             this.bgmController.StartTitleBgm();
-            this.Spawner.spawnFlg = false;
-            this.StartMenu.displayFlg = true;
-            this.result.displayFlg = false;
             this.resultObj.SetActive(false);
             this.pictureBookObj.SetActive(false);
             this.mainStage.gameObject.SetActive(false);
@@ -52,18 +49,14 @@ namespace touch_game
         public void ClickStart()
         {
             this.bgmController.StopBgm();
-            this.StartMenu.displayFlg = false;
-            this.ReadyText.displayFlg = true;
-            this.StartCoroutine(this.FullfillTime());
+            //this.StartCoroutine(this.FullfillTime());
             this.StartCoroutine(this.GameStart());
-            //this.playGameObj.SetActive(true);
-            //this.playGame.displayFlg = true;
+            this.StartMenu.gameObject.SetActive(false);
             this.mainStage.gameObject.SetActive(true);
         }
 
         public void ClickPictureBook()
         {
-            this.StartMenu.displayFlg = false;
             callPictureBook();
         }
 
@@ -86,7 +79,6 @@ namespace touch_game
                     }
                     this.Spawner.coefficient = 0.3f;
                 }
-                this.LeastTime.fillAmount = leastTime / LEAST_TIME;
                 leastTime -= Time.deltaTime;
                 yield return null;
             }
@@ -94,39 +86,30 @@ namespace touch_game
             this.StopGame();
         }
 
-        public IEnumerator FullfillTime()
-        {
-            while(this.LeastTime.fillAmount < 1.0f) { 
-                this.LeastTime.fillAmount += 0.02f;
-                yield return new WaitForSeconds(0.02f);
-            }
-        }
-
         private void StopGame()
         {
-            this.Spawner.spawnFlg = false;
             this.StartCoroutine(this.Spawner.DestroyAllChildren());
-            this.LeastTime.fillAmount = 0f;
             callResult();
         }
 
         private void callResult()
         {
             Debug.Log("結果表示処理を実行します");
-            this.background.scrollFlg = true;
-            this.background_sub.scrollFlg = true;
-            this.result.displayFlg = true;
             this.resultObj.SetActive(true);
             this.bgmController.StartTitleBgm();
         }
 
         private void callPictureBook()
         {
-            this.background.scrollFlg = true;
-            this.background_sub.scrollFlg = true;
             this.pictureBookObj.SetActive(true);
-            this.pictureBook.displayFlg = true;
             this.bgmController.StartTitleBgm();
+        }
+
+        public void ShowResult()
+        {
+            this.mainStage.gameObject.SetActive(false);
+            this.result.gameObject.SetActive(false);
+
         }
 
         // Update is called once per frame
