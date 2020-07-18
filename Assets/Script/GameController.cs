@@ -101,16 +101,18 @@ namespace touch_game
 
         private void callPictureBook()
         {
+            this.StartMenu.gameObject.SetActive(false);
             this.pictureBookObj.SetActive(true);
             this.bgmController.StartTitleBgm();
         }
 
+        /*
         public void ShowResult()
         {
             this.mainStage.gameObject.SetActive(false);
             this.result.gameObject.SetActive(false);
 
-        }
+        }*/
 
         // Update is called once per frame
         void Update()

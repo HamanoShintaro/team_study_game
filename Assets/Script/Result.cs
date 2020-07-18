@@ -13,37 +13,6 @@ namespace touch_game
         public CanvasGroup result;
         public float speed;
 
-        public Image dogImage;
-        public Image catImage;
-        public Image penguinImage;
-        public Image lionImage;
-        public Image ladybugImage;
-        public Image dinosaurImage;
-
-        public Text dogCount;
-        public Text catCount;
-        public Text penguinCount;
-        public Text lionCount;
-        public Text ladybugCount;
-        public Text dinosaurCount;
-
-        public Sprite dogBehind;
-        public Sprite dogFront;
-        public Sprite catBehind;
-        public Sprite catFront;
-        public Sprite penguinBehind;
-        public Sprite penguinFront;
-        public Sprite lionBehind;
-        public Sprite lionFront;
-        public Sprite ladybugBehind;
-        public Sprite ladybugFront;
-        public Sprite dinosaurBehind;
-        public Sprite dinosaurFront;
-
-        public CanvasGroup lionPanel;
-        public CanvasGroup ladybugPanel;
-        public CanvasGroup dinosaurPanel;
-
         private float alpha;
         
         // Start is called before the first frame update
