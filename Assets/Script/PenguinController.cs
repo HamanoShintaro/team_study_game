@@ -24,6 +24,7 @@ namespace touch_game
         public Sprite running01, running02, running03, running04,
              running05, running06, running07, running08, running09, running10;
         private Dictionary<int, Sprite> running;
+        public Mileage mileage;
 
         // Start is called before the first frame update
         void Start()
@@ -70,6 +71,15 @@ namespace touch_game
 
             if (transform.position.y < -550)
             {
+
+                PlayerPrefs.SetInt("MileageTotalRecord", PlayerPrefs.GetInt("MileageTotalRecord", 0) + mileage.mileageCount);
+                if (PlayerPrefs.GetInt("MileageHighestRecord", 0) < mileage.mileageCount) 
+                {
+                    PlayerPrefs.SetInt("MileageHighestRecord", mileage.mileageCount);
+                }
+                PlayerPrefs.SetInt("MileageNewestRecord", mileage.mileageCount);
+
+                PlayerPrefs.Save();
                 Result.SetActive(true);
                 MainStage.SetActive(false);
             }
