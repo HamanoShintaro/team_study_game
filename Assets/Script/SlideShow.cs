@@ -13,7 +13,6 @@ public class SlideShow : MonoBehaviour
     public GameObject slideShow;
     public GameObject mainStage;
 
-
     void OnEnable()
     {
         currentTime = 0f;

@@ -928,9 +928,8 @@ GameObject:
   - component: {fileID: 283999057}
   - component: {fileID: 283999059}
   - component: {fileID: 283999058}
-  - component: {fileID: 283999060}
   m_Layer: 0
-  m_Name: MileageResult
+  m_Name: MileageNewestRecord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -996,21 +995,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283999056}
   m_CullTransparentMesh: 0
---- !u!114 &283999060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283999056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a16cea64f5c5744f9492e3993aa2e92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MileageTotalRecordText: {fileID: 0}
-  MileageHighestRecordText: {fileID: 0}
-  MileageNewestRecordText: {fileID: 283999058}
 --- !u!1 &319781538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2354,9 +2338,8 @@ GameObject:
   - component: {fileID: 840796511}
   - component: {fileID: 840796513}
   - component: {fileID: 840796512}
-  - component: {fileID: 840796514}
   m_Layer: 5
-  m_Name: TotalRecordMileage
+  m_Name: MileageTotalRecord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2422,21 +2405,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840796510}
   m_CullTransparentMesh: 0
---- !u!114 &840796514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 840796510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a16cea64f5c5744f9492e3993aa2e92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MileageTotalRecordText: {fileID: 840796512}
-  MileageHighestRecordText: {fileID: 0}
-  MileageNewestRecordText: {fileID: 0}
 --- !u!1 &858757024
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,6 +2505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 876614259}
+  - component: {fileID: 876614260}
   m_Layer: 0
   m_Name: Result
   m_TagString: Untagged
@@ -2569,6 +2538,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &876614260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876614258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257b403a4249e664e8a7fedf50d7b2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MileageNewestRecord: {fileID: 283999056}
 --- !u!224 &914057258 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 866215755014849254, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
@@ -2853,7 +2835,6 @@ GameObject:
   - component: {fileID: 1005974497}
   - component: {fileID: 1005974498}
   - component: {fileID: 1005974495}
-  - component: {fileID: 1005974494}
   m_Layer: 5
   m_Name: StartMenu
   m_TagString: Untagged
@@ -2883,19 +2864,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000030518, y: -0.000030518}
   m_SizeDelta: {x: 928, y: 522.00006}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1005974494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005974492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94fc43344a344c3eb84730adff22712, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startMenu: {fileID: 1005974495}
 --- !u!225 &1005974495
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3752,6 +3720,7 @@ GameObject:
   - component: {fileID: 1350758698}
   - component: {fileID: 1350758697}
   - component: {fileID: 1350758699}
+  - component: {fileID: 1350758700}
   m_Layer: 5
   m_Name: PictureBook
   m_TagString: Untagged
@@ -3829,6 +3798,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1350758700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350758695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5a78e0505a32c4bb1abc9cee8e7804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MileageTotalRecord: {fileID: 840796510}
+  MileageHighestRecord: {fileID: 1734429725}
 --- !u!1 &1403742130
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,9 +5833,8 @@ GameObject:
   - component: {fileID: 1734429726}
   - component: {fileID: 1734429728}
   - component: {fileID: 1734429727}
-  - component: {fileID: 1734429729}
   m_Layer: 5
-  m_Name: HighestRecordMileage
+  m_Name: MileageHighestRecord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5918,21 +5900,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734429725}
   m_CullTransparentMesh: 0
---- !u!114 &1734429729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734429725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a16cea64f5c5744f9492e3993aa2e92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MileageTotalRecordText: {fileID: 0}
-  MileageHighestRecordText: {fileID: 1734429727}
-  MileageNewestRecordText: {fileID: 0}
 --- !u!1 &1813279945
 GameObject:
   m_ObjectHideFlags: 0
@@ -6466,7 +6433,7 @@ GameObject:
   - component: {fileID: 1881016268}
   - component: {fileID: 1881016267}
   m_Layer: 0
-  m_Name: NewRecordText
+  m_Name: NewRecordImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

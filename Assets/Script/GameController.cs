@@ -31,7 +31,6 @@ namespace touch_game
         public void Start()
         {
             //ゲーム環境の設定
-
         }
 
         public void StartMenuShiftMainStage()

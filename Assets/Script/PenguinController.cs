@@ -76,7 +76,7 @@ namespace touch_game
 
                 if (PlayerPrefs.GetInt("MileageHighestRecord", 0) < mileage.mileageCount) 
                 {
-                    Debug.Log("最高記録") ;
+                    Debug.Log("最高記録");
                     PlayerPrefs.SetInt("MileageHighestRecord", mileage.mileageCount);
                 }
 
