@@ -44,6 +44,12 @@ namespace touch_game
             this.pictureBookObj.SetActive(true);
         }
 
+        public void StartMenuShiftSlideShow()
+        {
+            this.startMenuObj.SetActive(false);
+            this.slideShowObj.SetActive(true);
+        }
+
         public void PictureBookShiftStartMenu()
         {
             this.pictureBookObj.SetActive(false);
