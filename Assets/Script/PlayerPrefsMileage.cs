@@ -26,6 +26,7 @@ public class PlayerPrefsMileage : MonoBehaviour
         MileageTotalRecordText = GetComponent<Text>();
         MileageHighestRecordText = GetComponent<Text>();
         MileageNewestRecordText = GetComponent<Text>();
+
         MileageTotalRecordText.text = MileageTotalRecord.ToString() + "m";
         MileageHighestRecordText.text = MileageHighestRecord.ToString() + "m";
         MileageNewestRecordText.text = MileageNewestRecord.ToString() + "m";
