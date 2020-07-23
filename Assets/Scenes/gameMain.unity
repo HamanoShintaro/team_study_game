@@ -751,7 +751,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 612213858}
-        m_MethodName: ClickStart
+        m_MethodName: StartMenuShiftMainStage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1563,7 +1563,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 612213858}
+        m_MethodName: ResultShiftStartMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &591869445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,19 +1780,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43418a08ef3594b4daa5d975d8939b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LEAST_TIME: 30
-  Spawner: {fileID: 0}
-  StartMenu: {fileID: 1005974494}
-  ReadyText: {fileID: 975638508}
-  background: {fileID: 0}
-  background_sub: {fileID: 0}
-  resultObj: {fileID: 876614258}
-  result: {fileID: 0}
+  startMenuObj: {fileID: 1005974492}
   pictureBookObj: {fileID: 1350758695}
-  pictureBook: {fileID: 1350758700}
-  playGameObj: {fileID: 0}
-  playGame: {fileID: 0}
-  mainStage: {fileID: 1813279951}
+  slideShowObj: {fileID: 186656510}
+  mainStageObj: {fileID: 1813279945}
+  resultObj: {fileID: 876614258}
   bgmController: {fileID: 105086706}
   voiceController: {fileID: 1451571360}
   seController: {fileID: 1840322738}
@@ -1816,12 +1819,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 975638505}
   - {fileID: 1005974493}
-  - {fileID: 186656511}
-  - {fileID: 876614259}
   - {fileID: 1350758696}
+  - {fileID: 186656511}
   - {fileID: 1813279946}
+  - {fileID: 876614259}
   m_Father: {fileID: 612213857}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2435,7 +2437,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 612213858}
+        m_MethodName: ResultShiftMainStage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &876614258
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,7 +2483,7 @@ RectTransform:
   - {fileID: 585936321}
   - {fileID: 858757025}
   m_Father: {fileID: 741358475}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2561,100 +2574,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932136168}
   m_CullTransparentMesh: 0
---- !u!1 &975638504
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 975638505}
-  - component: {fileID: 975638507}
-  - component: {fileID: 975638506}
-  - component: {fileID: 975638508}
-  m_Layer: 5
-  m_Name: ReadyText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &975638505
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975638504}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 741358475}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &975638506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975638504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 26b39d7b3097049739e813b398ec1198, type: 3}
-  m_Color: {r: 0, g: 0.38823533, b: 0.17254902, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 26b39d7b3097049739e813b398ec1198, type: 3}
-    m_FontSize: 80
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 200
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
---- !u!222 &975638507
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975638504}
-  m_CullTransparentMesh: 0
---- !u!114 &975638508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975638504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bae1ee9a17bca4cb38fad525a894c112, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayFlg: 0
-  readyText: {fileID: 975638506}
-  spanTime: 0.7
 --- !u!1 &991193440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2913,7 +2832,7 @@ RectTransform:
   - {fileID: 146102501}
   - {fileID: 1336509850}
   m_Father: {fileID: 741358475}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3656,7 +3575,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 612213858}
-        m_MethodName: ClickPictureBook
+        m_MethodName: StartMenuShiftPictureBook
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3789,7 +3708,6 @@ GameObject:
   - component: {fileID: 1350758698}
   - component: {fileID: 1350758697}
   - component: {fileID: 1350758699}
-  - component: {fileID: 1350758700}
   m_Layer: 5
   m_Name: PictureBook
   m_TagString: Untagged
@@ -3811,7 +3729,7 @@ RectTransform:
   - {fileID: 1924210692}
   - {fileID: 1571658488}
   m_Father: {fileID: 741358475}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3867,46 +3785,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1350758700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350758695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f2c1314dbcc840bcbd71fcdeb3d47b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayFlg: 0
-  pictureBook: {fileID: 1350758699}
-  pagePanel: {fileID: 1571658491}
-  speaker: {fileID: 0}
-  speed: 6
-  Image: {fileID: 0}
-  animalName: {fileID: 0}
-  numberTitle: {fileID: 0}
-  number: {fileID: 0}
-  dogFront: {fileID: 21300000, guid: 6d5383a0b932b421a84727d946be2bc8, type: 3}
-  catFront: {fileID: 21300000, guid: c47c20bde1f0b4adb9cf270f75cd0b06, type: 3}
-  penguinFront: {fileID: 21300000, guid: d09b31f7bfe53418ebc9f5ec401cc6d5, type: 3}
-  lionFront: {fileID: 21300000, guid: b234547962d3d4a8cb4cf4545aa52f2a, type: 3}
-  ladybugFront: {fileID: 21300000, guid: 629e57b9724264c6f9dc0157677e31c4, type: 3}
-  dinosaurFront: {fileID: 21300000, guid: 341b8b55d337d40f09c8befbc8a9319a, type: 3}
-  dogBehind: {fileID: 21300000, guid: ccb57cf57aed6446eb04857741b3d16a, type: 3}
-  catBehind: {fileID: 21300000, guid: 295e4a424a86d478e91190f72d715634, type: 3}
-  penguinBehind: {fileID: 21300000, guid: fb9799e2864ba44daae0f9be6aebe6a1, type: 3}
-  lionBehind: {fileID: 21300000, guid: 4557603414af34eb5b670c1c61070825, type: 3}
-  ladybugBehind: {fileID: 21300000, guid: 52a6b15eb9dca429a814610dae8b29eb, type: 3}
-  dinosaurBehind: {fileID: 21300000, guid: 1c4c2702cae184298aa22124bbee5619, type: 3}
-  seacret: {fileID: 21300000, guid: 1c4c2702cae184298aa22124bbee5619, type: 3}
-  dogCall: {fileID: 8300000, guid: 4c4ba8cd0fe8b494cb0ffabfbe4a1645, type: 3}
-  catCall: {fileID: 8300000, guid: 0544050d3e1594d62b5b8b17cb110cee, type: 3}
-  penguinCall: {fileID: 8300000, guid: 71adaec78fafe412d806777520798571, type: 3}
-  lionCall: {fileID: 8300000, guid: c42d23c7b6d9045a68f6d136459f97b9, type: 3}
-  ladybugCall: {fileID: 8300000, guid: 215821e92d41d4c36b428593974c7fe4, type: 3}
-  dinosaurCall: {fileID: 8300000, guid: 75c41ccc0914a40d7b71fd1af4c27dac, type: 3}
 --- !u!1 &1403742130
 GameObject:
   m_ObjectHideFlags: 0
@@ -4319,7 +4197,7 @@ GameObject:
   - component: {fileID: 1466245749}
   - component: {fileID: 1466245752}
   m_Layer: 5
-  m_Name: ReturnStart
+  m_Name: ReturnStartMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4411,8 +4289,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1350758700}
-          m_MethodName: restartClick
+        - m_Target: {fileID: 612213858}
+          m_MethodName: PictureBookShiftStartMenu
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6022,7 +5900,7 @@ RectTransform:
   - {fileID: 591869446}
   - {fileID: 1645673482}
   m_Father: {fileID: 741358475}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
