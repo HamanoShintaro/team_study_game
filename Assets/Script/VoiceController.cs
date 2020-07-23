@@ -40,9 +40,10 @@ namespace touch_game
         //ずかんタップ
         public AudioClip picture, picture1, picture2, picture3;
 
-        public void resetVoice()
+        public void Start()
         {
-            // ジャンプした時の声の設定
+            //ゲーム環境の設定
+
             jump = new Dictionary<int, AudioClip>{
                 {1, jump01},
                 {2, jump02},
@@ -52,6 +53,10 @@ namespace touch_game
                 {6, jump06},
             };
 
+        }
+
+        public void resetVoice()
+        {
 
             //男女抽選
             if (Random.Range(0.0f,1.0f) < 0.2f)
@@ -151,11 +156,6 @@ namespace touch_game
         }
 
         public void playVoiceJump(int level) { voiceController.PlayOneShot(jump[level]); }
-
-        void Start()
-        {
-
-        }
 
         // Update is called once per frame
         void Update()
