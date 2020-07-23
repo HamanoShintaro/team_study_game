@@ -14,7 +14,7 @@ public class SlideShow : MonoBehaviour
     public GameObject mainStage;
 
 
-    void Start()
+    void OnEnable()
     {
         currentTime = 0f;
         controlCount = 0;

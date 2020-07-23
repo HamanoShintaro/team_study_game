@@ -790,7 +790,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 612213858}
-        m_MethodName: StartMenuShiftSlideShow
+        m_MethodName: StartMenuShiftMainStage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

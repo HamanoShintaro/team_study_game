@@ -80,8 +80,8 @@ namespace touch_game
                 PlayerPrefs.SetInt("MileageNewestRecord", mileage.mileageCount);
 
                 PlayerPrefs.Save();
-                Result.SetActive(true);
                 MainStage.SetActive(false);
+                Result.SetActive(true);
             }
 
         }

@@ -14,15 +14,9 @@ public class Mileage : MonoBehaviour
     public int Evo3;
     private float mileageCountSpeed = 1.0f;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        MileageText = GetComponent<Text>();
-    }
-
     private void OnEnable()
     {
+        MileageText = GetComponent<Text>();
         mileageCount = 0;
         MileageText.text = mileageCount.ToString() + "m";
     }

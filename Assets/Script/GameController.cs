@@ -14,6 +14,7 @@ namespace touch_game
         public GameObject slideShowObj;
         public GameObject mainStageObj;
         public GameObject resultObj;
+        private int slideShowFlg;
 
         //音響用インスタンス
         public BgmController bgmController;
@@ -23,6 +24,7 @@ namespace touch_game
         private void Awake()
         {
             instance = this;
+            slideShowFlg = 0;
         }
         // Start is called before the first frame update
 
@@ -34,20 +36,24 @@ namespace touch_game
 
         public void StartMenuShiftMainStage()
         {
-            this.startMenuObj.SetActive(false);
-            this.mainStageObj.SetActive(true);
+            if (slideShowFlg == 0)
+            {
+                slideShowFlg += 1;
+                this.startMenuObj.SetActive(false);
+                this.slideShowObj.SetActive(true);
+            }
+
+            else
+            {
+                this.startMenuObj.SetActive(false);
+                this.mainStageObj.SetActive(true);
+            }
         }
 
         public void StartMenuShiftPictureBook()
         {
             this.startMenuObj.SetActive(false);
             this.pictureBookObj.SetActive(true);
-        }
-
-        public void StartMenuShiftSlideShow()
-        {
-            this.startMenuObj.SetActive(false);
-            this.slideShowObj.SetActive(true);
         }
 
         public void PictureBookShiftStartMenu()
