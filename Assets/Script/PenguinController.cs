@@ -16,6 +16,10 @@ namespace touch_game
         int jumpCount = 0;
         public GameObject MainStage;
         public GameObject Result;
+        public GameObject Penguin;
+        public float PositionX;
+        public float PositionY;
+        private Vector2 Position;
         //ジャンプ判定用フラグ
         private bool jumpFlg;
 
@@ -27,13 +31,16 @@ namespace touch_game
         public Mileage mileage;
 
         // Start is called before the first frame update
-        void Start()
+        void OnEnable()
         {
             //animator = GetComponent<Animator>();
             rb2d = GetComponent<Rigidbody2D>();
             playerImage = GetComponent<Image>();
             jumpFlg = true;
             InitPlayer();
+            Position.x = PositionX;
+            Position.y = PositionY;
+            Penguin.GetComponent<RectTransform>().anchoredPosition = Position;
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -84,6 +91,7 @@ namespace touch_game
 
                 PlayerPrefs.Save();
 
+                Penguin.SetActive(false);
                 MainStage.SetActive(false);
                 Result.SetActive(true);
             }

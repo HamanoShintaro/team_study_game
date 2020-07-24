@@ -10,7 +10,7 @@ public class Countdown : MonoBehaviour
 
 
 	// Start is called before the first frame update
-	void Start()
+	void OnEnable()
     {
 		mileage.gameObject.SetActive(false);
 		StartCoroutine(CountdownCoroutine());

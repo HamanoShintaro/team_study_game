@@ -1308,6 +1308,9 @@ MonoBehaviour:
   startPosition: 1465
   endPosition: -490
   mileage: {fileID: 468606698}
+  Background: {fileID: 319781538}
+  PositionX: 708
+  PositionY: -250
 --- !u!222 &319781541
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1335,6 +1338,12 @@ RectTransform:
   m_AnchoredPosition: {x: 708, y: -250}
   m_SizeDelta: {x: 950, y: 522}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &378970478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3448443523825915066, guid: 6d55e954c7c324d0e91385fe52fc860a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3448443523323734195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &420814597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3256,6 +3265,9 @@ MonoBehaviour:
   startPosition: 3000
   endPosition: -490
   mileage: {fileID: 468606698}
+  Background: {fileID: 991193440}
+  PositionX: 800
+  PositionY: -90
 --- !u!114 &991193443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3387,6 +3399,9 @@ MonoBehaviour:
   startPosition: 1465
   endPosition: -490
   mileage: {fileID: 468606698}
+  Background: {fileID: 1004799385}
+  PositionX: 470
+  PositionY: -150
 --- !u!1 &1005974492
 GameObject:
   m_ObjectHideFlags: 0
@@ -3951,6 +3966,21 @@ PrefabInstance:
       propertyPath: speed
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5204598924554756253, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: BlockField
+      value: 
+      objectReference: {fileID: 1996676071}
+    - target: {fileID: 5204598924554756253, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: PositionX
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204598924554756253, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: PositionY
+      value: -350
+      objectReference: {fileID: 0}
     - target: {fileID: 5704932669514373610, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
         type: 3}
       propertyPath: m_Offset.y
@@ -4060,6 +4090,9 @@ MonoBehaviour:
   startPosition: 1465
   endPosition: -490
   mileage: {fileID: 468606698}
+  Background: {fileID: 1278933954}
+  PositionX: 1653
+  PositionY: -250
 --- !u!114 &1278933957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4154,6 +4187,9 @@ MonoBehaviour:
   startPosition: 3000
   endPosition: -490
   mileage: {fileID: 468606698}
+  Background: {fileID: 1283513991}
+  PositionX: 2450
+  PositionY: -90
 --- !u!114 &1283513994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5215,6 +5251,9 @@ MonoBehaviour:
   startPosition: 1465
   endPosition: -490
   mileage: {fileID: 468606698}
+  Background: {fileID: 1495276085}
+  PositionX: 1415
+  PositionY: -400
 --- !u!114 &1495276088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5592,6 +5631,21 @@ PrefabInstance:
       propertyPath: speed
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5204598924554756253, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: BlockField
+      value: 
+      objectReference: {fileID: 1791270613}
+    - target: {fileID: 5204598924554756253, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: PositionX
+      value: 1610
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204598924554756253, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+        type: 3}
+      propertyPath: PositionY
+      value: -350
+      objectReference: {fileID: 0}
     - target: {fileID: 5704932669514373610, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
         type: 3}
       propertyPath: m_Offset.y
@@ -5950,6 +6004,9 @@ MonoBehaviour:
   startPosition: 1465
   endPosition: -490
   mileage: {fileID: 468606698}
+  Background: {fileID: 1601218261}
+  PositionX: 470
+  PositionY: -400
 --- !u!114 &1601218264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6044,6 +6101,9 @@ MonoBehaviour:
   startPosition: 1465
   endPosition: -490
   mileage: {fileID: 468606698}
+  Background: {fileID: 1614541207}
+  PositionX: 232
+  PositionY: -250
 --- !u!114 &1614541210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6144,6 +6204,9 @@ MonoBehaviour:
   startPosition: 1465
   endPosition: -490
   mileage: {fileID: 468606698}
+  Background: {fileID: 1646276233}
+  PositionX: 1178
+  PositionY: -250
 --- !u!114 &1646276236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6342,6 +6405,9 @@ MonoBehaviour:
   startPosition: 1465
   endPosition: -490
   mileage: {fileID: 468606698}
+  Background: {fileID: 1673755819}
+  PositionX: 1415
+  PositionY: -150
 --- !u!114 &1673755822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6683,6 +6749,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734429725}
   m_CullTransparentMesh: 0
+--- !u!1 &1791270613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 866215755014849255, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+    type: 3}
+  m_PrefabInstance: {fileID: 1567929206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1813279945
 GameObject:
   m_ObjectHideFlags: 0
@@ -6696,6 +6768,7 @@ GameObject:
   - component: {fileID: 1813279948}
   - component: {fileID: 1813279947}
   - component: {fileID: 1813279950}
+  - component: {fileID: 1813279951}
   m_Layer: 5
   m_Name: MainStage
   m_TagString: Untagged
@@ -6811,6 +6884,22 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &1813279951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813279945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6a6c5f86675c44f95b1ef43675cc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlockField1: {fileID: 1996676071}
+  BlockField2: {fileID: 1791270613}
+  Penguin: {fileID: 378970478}
+  textCountdown: {fileID: 591869448}
 --- !u!1 &1832206793
 GameObject:
   m_ObjectHideFlags: 0
@@ -7660,6 +7749,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977737356}
   m_CullTransparentMesh: 0
+--- !u!1 &1996676071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 866215755014849255, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,
+    type: 3}
+  m_PrefabInstance: {fileID: 1122511962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2019434350
 GameObject:
   m_ObjectHideFlags: 0
@@ -8140,6 +8235,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 642891107aef55648935484d3c5665ce,
         type: 3}
+    - target: {fileID: 3448443523825915043, guid: 6d55e954c7c324d0e91385fe52fc860a,
+        type: 3}
+      propertyPath: Penguin
+      value: 
+      objectReference: {fileID: 378970478}
+    - target: {fileID: 3448443523825915043, guid: 6d55e954c7c324d0e91385fe52fc860a,
+        type: 3}
+      propertyPath: PositionX
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3448443523825915043, guid: 6d55e954c7c324d0e91385fe52fc860a,
+        type: 3}
+      propertyPath: PositionY
+      value: -244
+      objectReference: {fileID: 0}
     - target: {fileID: 3448443523825915064, guid: 6d55e954c7c324d0e91385fe52fc860a,
         type: 3}
       propertyPath: Mileage

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MainBackground : MonoBehaviour
 {
@@ -11,6 +12,17 @@ public class MainBackground : MonoBehaviour
     public float startPosition;
     public float endPosition;
     public Mileage mileage;
+    public GameObject Background;
+    public float PositionX;
+    public float PositionY;
+    private Vector2 Position;
+
+    void OnEnable()
+    {
+        Position.x = PositionX;
+        Position.y = PositionY;
+        Background.GetComponent<RectTransform>().anchoredPosition = Position;
+    }
 
     // Update is called once per frame
     void Update()

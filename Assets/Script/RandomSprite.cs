@@ -42,7 +42,7 @@ public class RandomSprite : MonoBehaviour
     public int spriteListMaxIndex;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         //時間間隔を決定する
         interval = 9f;

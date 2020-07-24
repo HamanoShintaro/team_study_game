@@ -9,8 +9,9 @@ public class PenguinRun : MonoBehaviour
     public float endPosition;
     public Mileage mileage;
 
-    void Start()
+    void OnDisable()
     {
+        Destroy(this.gameObject);
     }
 
     // Update is called once per frame

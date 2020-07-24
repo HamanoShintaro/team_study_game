@@ -7,6 +7,17 @@ public class StartBlockField : MonoBehaviour
     public float speed = 1.0f;
     public float startPosition;
     public float endPosition;
+    public GameObject BlockField;
+    public float PositionX;
+    public float PositionY;
+    private Vector2 Position;
+
+    void OnEnable()
+    {
+        Position.x = PositionX;
+        Position.y = PositionY;
+        BlockField.GetComponent<RectTransform>().anchoredPosition = Position;
+    }
 
     // Update is called once per frame
     void Update()
@@ -20,7 +31,7 @@ public class StartBlockField : MonoBehaviour
 
     void ScrollEnd()
     {
-        Destroy(gameObject);
+        BlockField.SetActive(false);
 
         //通り過ぎた分を加味してポジションを再設定
         //float diff = transform.position.x - endPosition;
