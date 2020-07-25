@@ -23,12 +23,18 @@ namespace touch_game
         //ジャンプ判定用フラグ
         private bool jumpFlg;
 
-        // 進化段階1用のSpriteの定義
+        // 走るモーション用のspriteの定義
         public Sprite jump00;
         public Sprite running01, running02, running03, running04,
              running05, running06, running07, running08, running09, running10;
         private Dictionary<int, Sprite> running;
         public Mileage mileage;
+
+        // ジャンプモーションにかかわる変数の定義
+        public float level;
+        public Sprite spinImage;
+        public Sprite poseImage001, poseImage002, poseImage003;
+        private Dictionary<int, Sprite> poseImage;
 
         // Start is called before the first frame update
         void OnEnable()
