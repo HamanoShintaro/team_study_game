@@ -24,25 +24,21 @@ public class Result : MonoBehaviour
 
         if (Evo1 <= NewestRecord)
         {
-            ResultBackground = this.GetComponent<Image>();
             ResultBackground.sprite = image1;
         }
 
         else if (Evo2 <= NewestRecord)
         {
-            ResultBackground = this.GetComponent<Image>();
             ResultBackground.sprite = image2;
         }
 
         else if (Evo3 <= NewestRecord)
         {
-            ResultBackground = this.GetComponent<Image>();
             ResultBackground.sprite = image3;
         }
 
         else
         {
-            ResultBackground = this.GetComponent<Image>();
             ResultBackground.sprite = image4;
         }
 
