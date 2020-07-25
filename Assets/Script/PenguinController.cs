@@ -47,6 +47,12 @@ namespace touch_game
             Position.x = PositionX;
             Position.y = PositionY;
             Penguin.GetComponent<RectTransform>().anchoredPosition = Position;
+            poseImage = new Dictionary<int, Sprite>{
+                {1, poseImage001},
+                {2, poseImage002},
+                {3, poseImage003}
+            };
+
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -141,16 +147,50 @@ namespace touch_game
         }
 
         private int spinLoopCount;
+        private float randomNum;
         public IEnumerator CharacterSpin() 
         {
-            //Debug.Log("キャラクターを回転させます");
-            spinLoopCount = 0;
-            while (spinLoopCount < 20) { 
+            if (level < 4.0f) { 
+                //Debug.Log("キャラクターを回転させます");
+                spinLoopCount = 0;
+                while (spinLoopCount < 20) { 
                 
-                transform.Rotate(0, 0, -18.0f);
-                yield return new WaitForSeconds(0.01f);
-                spinLoopCount++;
+                    transform.Rotate(0, 0, -18.0f);
+                    yield return new WaitForSeconds(0.01f);
+                    spinLoopCount++;
+                }
             }
+
+            if (level == 4.0f)
+            {
+                //回転中画像に切り替え
+                playerImage.sprite = spinImage;
+
+                //回転させる
+                spinLoopCount = 0;
+                while (spinLoopCount < 10)
+                {
+
+                    transform.Rotate(0, 0, -36.0f);
+                    yield return new WaitForSeconds(0.01f);
+                    spinLoopCount++;
+                }
+                //ポーズ画像に切り替える
+                randomNum = Random.Range(0.0f, 3.0f);
+                if (randomNum < 1.0f)
+                {
+                    playerImage.sprite = poseImage[1];
+                }
+                else if (randomNum < 2.0f)
+                {
+                    playerImage.sprite = poseImage[2];
+                }
+                else 
+                { 
+                    playerImage.sprite = poseImage[3]; 
+                }
+            }
+            
         }
     }
 }
