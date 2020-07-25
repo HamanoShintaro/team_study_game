@@ -21,6 +21,10 @@ namespace touch_game
         /// </summary>
         public GameObject Episode;
 
+        public GameObject BackGround;
+
+        public GameObject BackGroundSub;
+
         /// <summary>
         /// 記録画面の初期表示設定を行う。
         /// </summary>
@@ -44,6 +48,20 @@ namespace touch_game
             this.Recode.SetActive(false);
             this.PenginEvolution.SetActive(false);
             this.Episode.SetActive(false);
+
+            //背景がラインなしダイアリーの場合、
+            if (this.BackGround.activeSelf == false)
+            {
+                this.BackGroundSub.SetActive(false);
+                this.BackGround.SetActive(true);
+            }
+
+            //ペンギン画面の場合、背景をラインなしダイアリーに変更
+            if (viewObject.Equals(this.PenginEvolution))
+            {
+                this.BackGround.SetActive(false);
+                this.BackGroundSub.SetActive(true);
+            }
 
             //引数の記録画面オブジェクトのみを表示する
             viewObject.SetActive(true);
