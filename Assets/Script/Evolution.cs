@@ -7,41 +7,41 @@ using UnityEngine.UI;
 
 public class Evolution : MonoBehaviour
 {
-    Image ImageChange;
-    Vector2 WidthAndHeight;
-    Vector2 Position;
-    public Text Mileage;
-    public String MileageText;
-    public Sprite Image1;
-    public Sprite Image2;
+    public Mileage mileage;
+    public GameObject penguin1;
+    public GameObject penguin2;
+    public GameObject penguin3;
+    public GameObject penguin4;
+    private GameObject Player;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        ImageChange = gameObject.GetComponent<Image>();
-        WidthAndHeight = gameObject.GetComponent<RectTransform>().sizeDelta;
-        Position = gameObject.GetComponent<RectTransform>().anchoredPosition;
+        Player = Instantiate(penguin1, transform);
     }
 
     // Update is called once per frame
     void Update()
     {
-        MileageText = Mileage.text.ToString();
-        
-        if (MileageText == "10m")
+        if (mileage.mileageCount >= mileage.Evo1)
         {
-            ImageChange.sprite = Image1;
+            Destroy(Player);
+            Player = Instantiate(penguin4, transform);
         }
-
-        if (MileageText == "25m")
+        else if (mileage.mileageCount >= mileage.Evo2)
         {
-            ImageChange.sprite = Image2;
-            WidthAndHeight.x = 200;
-            WidthAndHeight.y = 200;
-            Position.y = -270;
-            GetComponent<RectTransform>().sizeDelta = WidthAndHeight;
-            GetComponent<RectTransform>().anchoredPosition = Position;
+            Destroy(Player);
+            Player = Instantiate(penguin3, transform);
         }
+        else if (mileage.mileageCount >= mileage.Evo3)
+        {
+            Destroy(Player);
+            Player = Instantiate(penguin2, transform);
+        }
+    }
 
+    private void OnDisable()
+    {
+        Destroy(Player);
     }
 }
