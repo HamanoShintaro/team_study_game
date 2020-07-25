@@ -30,19 +30,19 @@ public class Evolution : MonoBehaviour
     void Update()
     {
 
-        if (mileage.mileageCount == mileage.Evo1 && EvoFlg == 2)
+        if (mileage.mileageCount >= mileage.Evo1 && EvoFlg == 2)
         {
             Destroy(Player);
             EvoFlg += 1;
             Player = Instantiate(PenguinList[EvoFlg], transform);
         }
-        else if (mileage.mileageCount == mileage.Evo2  && EvoFlg == 1)
+        else if (mileage.mileageCount >= mileage.Evo2  && EvoFlg == 1)
         {
             Destroy(Player);
             EvoFlg += 1;
             Player = Instantiate(PenguinList[EvoFlg], transform);
         }
-        else if (mileage.mileageCount == mileage.Evo3  && EvoFlg == 0)
+        else if (mileage.mileageCount >= mileage.Evo3  && EvoFlg == 0)
         {
             Destroy(Player);
             EvoFlg += 1;
