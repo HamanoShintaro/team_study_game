@@ -1793,7 +1793,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.06385723, g: 0.06432202, b: 0.066037714, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3200,10 +3200,10 @@ MonoBehaviour:
   MileageNewestRecord: {fileID: 283999056}
   NewRecordImage: {fileID: 1881016265}
   ResultBackground: {fileID: 543033036}
-  image1: {fileID: 21300000, guid: 499ae81f0603fc447ad6781567a048ba, type: 3}
-  image2: {fileID: 21300000, guid: 4f0581fb59a405949892fe233607f795, type: 3}
-  image3: {fileID: 21300000, guid: b12316a3452134d49aa028594c82d40d, type: 3}
-  image4: {fileID: 21300000, guid: 042a6ab4e2d6470468b0597fe38c2c37, type: 3}
+  image1: {fileID: 21300000, guid: b3ca09e503fbb3d48930aeb619fbd1e2, type: 3}
+  image2: {fileID: 21300000, guid: 7e9406f45df807645b4b24de6aad89ee, type: 3}
+  image3: {fileID: 21300000, guid: d4cac8b5d173fb94398bed48d1e8b400, type: 3}
+  image4: {fileID: 21300000, guid: 18fdafba054017e4e8a96a44d513543e, type: 3}
   Evo1: 500
   Evo2: 300
   Evo3: 100
@@ -7510,7 +7510,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bdcb33e6028524949b4c612c23e9fbc5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d604493d273014428353c1c8bb500a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
