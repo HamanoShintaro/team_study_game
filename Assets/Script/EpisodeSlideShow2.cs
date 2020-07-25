@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace touch_game
 {
-    public class EpisodeSlideShow : MonoBehaviour
+    public class EpisodeSlideShow2 : MonoBehaviour
     {
         private int TapCount = 0;
         public GameObject[] Slide = new GameObject[4];
@@ -29,14 +29,14 @@ namespace touch_game
         // Update is called once per frame
         void Update()
         {
-            if(TapCount == Slide.Length)
+            if (TapCount == Slide.Length)
             {
                 EpisodeSlideShowController.CloseEpisode();
                 TapCount = 0;
             }
             else
             {
-                foreach(GameObject g in Slide)
+                foreach (GameObject g in Slide)
                 {
                     g.SetActive(false);
                 }
