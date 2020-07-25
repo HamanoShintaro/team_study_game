@@ -8696,7 +8696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1813279946
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8838,7 +8838,7 @@ MonoBehaviour:
     type: 3}
   penguin2: {fileID: 2972717360070394892, guid: 4232dbb6438a75541a9f0c65f934840e,
     type: 3}
-  penguin3: {fileID: 3448443523825915066, guid: 6d55e954c7c324d0e91385fe52fc860a,
+  penguin3: {fileID: 2034012591183963275, guid: 25dbbf8ed92026549b8509f623466ba5,
     type: 3}
   penguin4: {fileID: 1018743898424006302, guid: 39433a8820cca104e84ac0d48e61a2fb,
     type: 3}

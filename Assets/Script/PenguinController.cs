@@ -30,6 +30,10 @@ namespace touch_game
         public Sprite poseImage001, poseImage002, poseImage003;
         private Dictionary<int, Sprite> poseImage;
 
+        //3段位階における2段ジャンプの画像の設定
+        public Sprite jump_level3_01, jump_level3_02, jump_level3_03, jump_level3_04, jump_level3_05, jump_level3_06, jump_level3_07, jump_level3_08;
+        public Dictionary<int, Sprite> jump_level_3;
+
         // Start is called before the first frame update
         void OnEnable()
         {
@@ -43,6 +47,16 @@ namespace touch_game
                 {2, poseImage002},
                 {3, poseImage003}
             };
+            jump_level_3 = new Dictionary<int, Sprite>{
+                { 1, jump_level3_01},
+                { 2, jump_level3_02},
+                { 3, jump_level3_03},
+                { 4, jump_level3_04},
+                { 5, jump_level3_05},
+                { 6, jump_level3_06},
+                { 7, jump_level3_07},
+                { 8, jump_level3_08}
+        };
 
         }
 
@@ -121,7 +135,7 @@ namespace touch_game
         private float randomNum;
         public IEnumerator CharacterSpin() 
         {
-            if (level < 4.0f) { 
+            if (level < 3.0f) { 
                 //Debug.Log("キャラクターを回転させます");
                 spinLoopCount = 0;
                 while (spinLoopCount < 20) { 
@@ -129,6 +143,15 @@ namespace touch_game
                     transform.Rotate(0, 0, -18.0f);
                     yield return new WaitForSeconds(0.01f);
                     spinLoopCount++;
+                }
+            }
+
+            if (level == 3.0f) {
+                spinLoopCount = 0;
+                while (spinLoopCount < 8) {
+                    spinLoopCount++;
+                    playerImage.sprite = jump_level_3[spinLoopCount];
+                    yield return new WaitForSeconds(0.02f);
                 }
             }
 

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3448443523825915066
+--- !u!1 &2034012591183963275
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,28 +8,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3448443523825915065}
-  - component: {fileID: 3448443523825915070}
-  - component: {fileID: 3448443523825915071}
-  - component: {fileID: 3448443523825915064}
-  - component: {fileID: 3448443523825915068}
-  - component: {fileID: 3448443523825915069}
-  - component: {fileID: 3448443523825915042}
-  - component: {fileID: 3448443523825915043}
+  - component: {fileID: 2034012591183963272}
+  - component: {fileID: 2034012591183963267}
+  - component: {fileID: 2034012591183963266}
+  - component: {fileID: 2034012591183963277}
+  - component: {fileID: 2034012591183963276}
+  - component: {fileID: 2034012591183963279}
+  - component: {fileID: 2034012591183963278}
+  - component: {fileID: 2034012591183963273}
   m_Layer: 0
-  m_Name: Level1
+  m_Name: Level3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &3448443523825915065
+--- !u!224 &2034012591183963272
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3448443523825915066}
+  m_GameObject: {fileID: 2034012591183963275}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -39,16 +39,16 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 60, y: -322}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 70, y: -242}
+  m_SizeDelta: {x: 280, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3448443523825915070
+--- !u!114 &2034012591183963267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3448443523825915066}
+  m_GameObject: {fileID: 2034012591183963275}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7e0dd4a938cb7b146b8af07fad3c742b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72c4750eaa2174638becfce2981b47f8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -71,21 +71,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &3448443523825915071
+--- !u!222 &2034012591183963266
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3448443523825915066}
+  m_GameObject: {fileID: 2034012591183963275}
   m_CullTransparentMesh: 0
---- !u!114 &3448443523825915064
+--- !u!114 &2034012591183963277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3448443523825915066}
+  m_GameObject: {fileID: 2034012591183963275}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0f89a7bd3bbb9d49923ecd18626170e, type: 3}
@@ -97,20 +97,20 @@ MonoBehaviour:
   penguin3: {fileID: 0}
   penguin4: {fileID: 0}
   PenguinList: []
---- !u!61 &3448443523825915068
+--- !u!61 &2034012591183963276
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3448443523825915066}
+  m_GameObject: {fileID: 2034012591183963275}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.8, y: -39.5}
+  m_Offset: {x: -1.8, y: -120.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -123,14 +123,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 44.67, y: 5.4}
   m_EdgeRadius: 0
---- !u!50 &3448443523825915069
+--- !u!50 &2034012591183963279
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3448443523825915066}
+  m_GameObject: {fileID: 2034012591183963275}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -144,49 +144,57 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!70 &3448443523825915042
+--- !u!70 &2034012591183963278
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3448443523825915066}
+  m_GameObject: {fileID: 2034012591183963275}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.8670342, y: 1.8668284}
-  m_Size: {x: 67.7046, y: 78.90545}
+  m_Offset: {x: -1.8670342, y: -58.1}
+  m_Size: {x: 67.7046, y: 111.4}
   m_Direction: 0
---- !u!114 &3448443523825915043
+--- !u!114 &2034012591183963273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3448443523825915066}
+  m_GameObject: {fileID: 2034012591183963275}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 129e34ec5a0a0604796470a38a714806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   flapVelocity: 370
-  jump00: {fileID: 8162913495902660837, guid: 535f40c1f23a7504eb924f34077adc97, type: 3}
-  running01: {fileID: 21300000, guid: fb7bf3eb0db078b45b4b19faea90238c, type: 3}
-  running02: {fileID: 21300000, guid: 9af43bc1d95a4a7479f0288cfe024652, type: 3}
-  running03: {fileID: 21300000, guid: ad8a08dccb58167438ea9af2bdbae387, type: 3}
-  running04: {fileID: 21300000, guid: 235ee7efc30a9af49acb3f2aa362ce52, type: 3}
-  running05: {fileID: 21300000, guid: 0c5f6137e536a7344bfaa8199cb886e4, type: 3}
-  running06: {fileID: 21300000, guid: 7e7cb8ce3614ea247b91b320ad36ff45, type: 3}
-  running07: {fileID: 21300000, guid: 1d5ba23add915a64a8e14735f38f5eb8, type: 3}
-  running08: {fileID: 21300000, guid: b94019038c933d849a3c7b2178ea7096, type: 3}
-  running09: {fileID: 21300000, guid: 35d10498406adc7408acc3393beed210, type: 3}
-  running10: {fileID: 21300000, guid: fb586e0297bfc2f43abd2d1cdca1b958, type: 3}
+  jump00: {fileID: 21300000, guid: 067cb8f00106b433980691953d45c1b6, type: 3}
+  running01: {fileID: 21300000, guid: 05ba7203e8b8b4909ace76ab28fb8d9c, type: 3}
+  running02: {fileID: 21300000, guid: 040913072577f4a6abc9fd6769cd8aad, type: 3}
+  running03: {fileID: 21300000, guid: 72c4750eaa2174638becfce2981b47f8, type: 3}
+  running04: {fileID: 21300000, guid: d4c4bdfefbe2b41bdbfbd25ab3ab871d, type: 3}
+  running05: {fileID: 21300000, guid: fd6d4e05c59a74f399d407695d3c6c44, type: 3}
+  running06: {fileID: 21300000, guid: f25868712bd73419aad14dac01eb41db, type: 3}
+  running07: {fileID: 21300000, guid: afab77e6a3241414bbc3649a0367a62b, type: 3}
+  running08: {fileID: 21300000, guid: 754d63869f19c449d8d7588b666c9d02, type: 3}
+  running09: {fileID: 21300000, guid: 4a1909d0f5aee4565a739155d2c18660, type: 3}
+  running10: {fileID: 21300000, guid: e39696e7de0a24240af3f01a555f12d4, type: 3}
   mileage: {fileID: 0}
-  level: 1
+  level: 3
   spinImage: {fileID: 0}
   poseImage001: {fileID: 0}
   poseImage002: {fileID: 0}
   poseImage003: {fileID: 0}
+  jump_level3_01: {fileID: 21300000, guid: dd7b06c1335b846fc86ba4c75b988739, type: 3}
+  jump_level3_02: {fileID: 21300000, guid: 1227973488d7c4199a1465624bf21568, type: 3}
+  jump_level3_03: {fileID: 21300000, guid: c8e57038297444c68b0af65f038509ca, type: 3}
+  jump_level3_04: {fileID: 21300000, guid: 359a47c8294b74e50ae2d211388159a9, type: 3}
+  jump_level3_05: {fileID: 21300000, guid: 38bf82fce37c247b78308b14ff3c5049, type: 3}
+  jump_level3_06: {fileID: 21300000, guid: f452d4d964efd4fe38bfa6b27da882c1, type: 3}
+  jump_level3_07: {fileID: 21300000, guid: f5fef61837c6240d582d3abbba358e9e, type: 3}
+  jump_level3_08: {fileID: 21300000, guid: 6872244608d7646829426facf6062a58, type: 3}
