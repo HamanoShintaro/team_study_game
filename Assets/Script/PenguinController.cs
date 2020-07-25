@@ -14,12 +14,6 @@ namespace touch_game
         private Image playerImage;
         public float flapVelocity;
         int jumpCount = 0;
-        public GameObject MainStage;
-        public GameObject Result;
-        public GameObject Penguin;
-        public float PositionX;
-        public float PositionY;
-        private Vector2 Position;
         //ジャンプ判定用フラグ
         private bool jumpFlg;
 
@@ -44,9 +38,6 @@ namespace touch_game
             playerImage = GetComponent<Image>();
             jumpFlg = true;
             InitPlayer();
-            Position.x = PositionX;
-            Position.y = PositionY;
-            Penguin.GetComponent<RectTransform>().anchoredPosition = Position;
             poseImage = new Dictionary<int, Sprite>{
                 {1, poseImage001},
                 {2, poseImage002},
@@ -86,28 +77,6 @@ namespace touch_game
             if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)
             {
                 flap();
-            }
-
-            if (transform.position.y < -550)
-            {
-
-                PlayerPrefs.SetInt("MileageTotalRecord", PlayerPrefs.GetInt("MileageTotalRecord", 0) + mileage.mileageCount);
-
-                if (PlayerPrefs.GetInt("MileageHighestRecord", 0) < mileage.mileageCount) 
-                {
-                    Debug.Log("最高記録");
-                    PlayerPrefs.SetInt("MileageHighestRecord", mileage.mileageCount);
-                }
-
-                PlayerPrefs.SetInt("MileageNewestRecord", mileage.mileageCount);
-
-                PlayerPrefs.Save();
-
-                mileage.mileageCount = 0;
-
-                Penguin.SetActive(false);
-                MainStage.SetActive(false);
-                Result.SetActive(true);
             }
 
         }

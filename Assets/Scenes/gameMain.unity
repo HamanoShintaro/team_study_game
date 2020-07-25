@@ -7665,6 +7665,7 @@ GameObject:
   - component: {fileID: 1813279950}
   - component: {fileID: 1813279951}
   - component: {fileID: 1813279952}
+  - component: {fileID: 1813279953}
   m_Layer: 5
   m_Name: MainStage
   m_TagString: Untagged
@@ -7794,6 +7795,8 @@ MonoBehaviour:
   BlockField1: {fileID: 1996676071}
   BlockField2: {fileID: 1791270613}
   textCountdown: {fileID: 591869448}
+  mileage: {fileID: 468606698}
+  Result: {fileID: 876614258}
 --- !u!114 &1813279952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7809,13 +7812,39 @@ MonoBehaviour:
   mileage: {fileID: 468606698}
   penguin1: {fileID: 3448443523825915066, guid: 6d55e954c7c324d0e91385fe52fc860a,
     type: 3}
-  penguin2: {fileID: 1018743898424006302, guid: 39433a8820cca104e84ac0d48e61a2fb,
+  penguin2: {fileID: 2972717360070394892, guid: 4232dbb6438a75541a9f0c65f934840e,
     type: 3}
   penguin3: {fileID: 3448443523825915066, guid: 6d55e954c7c324d0e91385fe52fc860a,
     type: 3}
   penguin4: {fileID: 1018743898424006302, guid: 39433a8820cca104e84ac0d48e61a2fb,
     type: 3}
   PenguinList: []
+--- !u!61 &1813279953
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813279945}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -400}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 930, y: 30}
+  m_EdgeRadius: 0
 --- !u!1 &1832206793
 GameObject:
   m_ObjectHideFlags: 0
