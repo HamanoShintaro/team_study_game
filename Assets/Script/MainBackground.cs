@@ -5,7 +5,8 @@ using UnityEngine.UIElements;
 
 public class MainBackground : MonoBehaviour
 {
-    public float speed;
+    private float speed;
+    public float defspeed;
     public float speedEvo1;
     public float speedEvo2;
     public float speedEvo3;
@@ -19,6 +20,7 @@ public class MainBackground : MonoBehaviour
 
     void OnEnable()
     {
+        speed = defspeed;
         Position.x = PositionX;
         Position.y = PositionY;
         Background.GetComponent<RectTransform>().anchoredPosition = Position;
