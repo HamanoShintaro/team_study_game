@@ -7793,7 +7793,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BlockField1: {fileID: 1996676071}
   BlockField2: {fileID: 1791270613}
-  Penguin: {fileID: 0}
   textCountdown: {fileID: 591869448}
 --- !u!114 &1813279952
 MonoBehaviour:
@@ -7816,6 +7815,7 @@ MonoBehaviour:
     type: 3}
   penguin4: {fileID: 1018743898424006302, guid: 39433a8820cca104e84ac0d48e61a2fb,
     type: 3}
+  PenguinList: []
 --- !u!1 &1832206793
 GameObject:
   m_ObjectHideFlags: 0

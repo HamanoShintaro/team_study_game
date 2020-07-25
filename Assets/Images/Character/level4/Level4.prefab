@@ -17,12 +17,12 @@ GameObject:
   - component: {fileID: 1018743898424006278}
   - component: {fileID: 1018743898424006279}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Level4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1018743898424006301
 RectTransform:
   m_ObjectHideFlags: 0
@@ -91,10 +91,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f89a7bd3bbb9d49923ecd18626170e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mileage: {fileID: 0}
-  MileageText: 
-  Image1: {fileID: 21300000, guid: 68300508805004497994b78c68b6eb25, type: 3}
-  Image2: {fileID: 21300000, guid: 68300508805004497994b78c68b6eb25, type: 3}
+  mileage: {fileID: 0}
+  penguin1: {fileID: 0}
+  penguin2: {fileID: 0}
+  penguin3: {fileID: 0}
+  penguin4: {fileID: 0}
+  PenguinList: []
 --- !u!61 &1018743898424006296
 BoxCollider2D:
   m_ObjectHideFlags: 0

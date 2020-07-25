@@ -12,35 +12,45 @@ public class Evolution : MonoBehaviour
     public GameObject penguin2;
     public GameObject penguin3;
     public GameObject penguin4;
+    public List<GameObject> PenguinList = new List<GameObject>();
+    private int EvoFlg;
     private GameObject Player;
 
-    // Start is called before the first frame update
     void OnEnable()
     {
-        Player = Instantiate(penguin1, transform);
+        PenguinList.Add(penguin1);
+        PenguinList.Add(penguin2);
+        PenguinList.Add(penguin3);
+        PenguinList.Add(penguin4);
+        EvoFlg = 0;
+        Player = Instantiate(PenguinList[EvoFlg], transform);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (mileage.mileageCount >= mileage.Evo1)
+
+        if (mileage.mileageCount == mileage.Evo1 && EvoFlg == 2)
         {
             Destroy(Player);
-            Player = Instantiate(penguin4, transform);
+            EvoFlg += 1;
+            Player = Instantiate(PenguinList[EvoFlg], transform);
         }
-        else if (mileage.mileageCount >= mileage.Evo2)
+        else if (mileage.mileageCount == mileage.Evo2  && EvoFlg == 1)
         {
             Destroy(Player);
-            Player = Instantiate(penguin3, transform);
+            EvoFlg += 1;
+            Player = Instantiate(PenguinList[EvoFlg], transform);
         }
-        else if (mileage.mileageCount >= mileage.Evo3)
+        else if (mileage.mileageCount == mileage.Evo3  && EvoFlg == 0)
         {
             Destroy(Player);
-            Player = Instantiate(penguin2, transform);
+            EvoFlg += 1;
+            Player = Instantiate(PenguinList[EvoFlg], transform);
         }
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
         Destroy(Player);
     }
