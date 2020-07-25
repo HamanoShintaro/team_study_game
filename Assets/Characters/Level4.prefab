@@ -39,7 +39,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 88, y: -1055.564}
+  m_AnchoredPosition: {x: 88, y: -222}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1018743898424006298
@@ -173,11 +173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flapVelocity: 370
-  MainStage: {fileID: 0}
-  Result: {fileID: 0}
-  Penguin: {fileID: 1018743898424006302}
-  PositionX: 88
-  PositionY: -244
   jump00: {fileID: 21300000, guid: d1a6d9f1cf7294a89a6e54a2987678b9, type: 3}
   running01: {fileID: 21300000, guid: 68300508805004497994b78c68b6eb25, type: 3}
   running02: {fileID: 21300000, guid: 0f2eaded469864b1cb6524271c38e7d0, type: 3}
