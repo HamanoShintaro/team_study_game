@@ -42,12 +42,10 @@ public class Result : MonoBehaviour
             ResultBackground.sprite = image4;
         }
 
-        if (PlayerPrefs.GetInt("MileageHighestRecord", 0) < NewestRecord)
+        if (PlayerPrefs.GetInt("MileageHighestRecord", 0) == NewestRecord)
         {
             NewRecordImage.SetActive(true);
         }
-
-
     }
 
     // Update is called once per frame
