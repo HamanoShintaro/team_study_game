@@ -103,6 +103,8 @@ namespace touch_game
 
                 PlayerPrefs.Save();
 
+                mileage.mileageCount = 0;
+
                 Penguin.SetActive(false);
                 MainStage.SetActive(false);
                 Result.SetActive(true);

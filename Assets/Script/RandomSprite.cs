@@ -19,7 +19,7 @@ public class RandomSprite : MonoBehaviour
     //リストのインデックス
     private System.Random randomIndex = new System.Random();
     //時間間隔の最小値
-    public float minTime = 2f;
+    public float minTime = 3f;
     //時間間隔の最大値
     public float maxTime = 5f;
     //X座標の最小値
@@ -46,6 +46,10 @@ public class RandomSprite : MonoBehaviour
     {
         //時間間隔を決定する
         interval = 9f;
+        spriteListMaxIndex = 3;
+        minTime = 3.0f;
+        maxTime = 4.0f;
+        time = 0f;
 
         //Listに値を格納
         spriteList.Add(sprite1);
@@ -80,18 +84,18 @@ public class RandomSprite : MonoBehaviour
         if (mileage.mileageCount >= mileage.Evo1)
         {
             minTime = 1.0f;
-            maxTime = 1.5f;
+            maxTime = 2.0f;
         }
         else if (mileage.mileageCount >= mileage.Evo2)
         {
             spriteListMaxIndex = 6;
-            minTime = 1.0f;
-            maxTime = 2.5f;
+            minTime = 1.5f;
+            maxTime = 2.2f;
         }
         else if (mileage.mileageCount >= mileage.Evo3)
         {
-            minTime = 2.5f;
-            maxTime = 3.5f;
+            minTime = 2.0f;
+            maxTime = 3.0f;
         }
     }
 

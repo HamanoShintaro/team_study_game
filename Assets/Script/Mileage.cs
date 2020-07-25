@@ -12,10 +12,11 @@ public class Mileage : MonoBehaviour
     public int Evo1;
     public int Evo2;
     public int Evo3;
-    private float mileageCountSpeed = 1.0f;
+    private float mileageCountSpeed;
 
     private void OnEnable()
     {
+        mileageCountSpeed = 1.0f;
         MileageText = GetComponent<Text>();
         mileageCount = 0;
         MileageText.text = mileageCount.ToString() + "m";
