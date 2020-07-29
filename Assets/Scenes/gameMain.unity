@@ -2205,9 +2205,9 @@ MonoBehaviour:
   MileageText: {fileID: 468606696}
   mileageCount: 0
   min: 0
-  Evo1: 25000
-  Evo2: 5000
-  Evo3: 1000
+  Evo1: 10000
+  Evo2: 2500
+  Evo3: 500
 --- !u!1 &474722682
 GameObject:
   m_ObjectHideFlags: 0
@@ -4781,9 +4781,9 @@ MonoBehaviour:
   image2: {fileID: 21300000, guid: 7e9406f45df807645b4b24de6aad89ee, type: 3}
   image3: {fileID: 21300000, guid: d4cac8b5d173fb94398bed48d1e8b400, type: 3}
   image4: {fileID: 21300000, guid: 18fdafba054017e4e8a96a44d513543e, type: 3}
-  Evo1: 25000
-  Evo2: 5000
-  Evo3: 1000
+  Evo1: 10000
+  Evo2: 2500
+  Evo3: 500
 --- !u!224 &914057258 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 866215755014849254, guid: c5b14e678c3a6aa4aa71b48c5ffc1241,

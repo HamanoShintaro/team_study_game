@@ -23,7 +23,15 @@ public class PenguinRun : MonoBehaviour
         //スクロールが目標ポイントまで達成したかをチェック
         if (transform.position.x <= endPosition) ScrollEnd();
 
-        if (mileage.mileageCount >= mileage.Evo1)
+        if (mileage.mileageCount >= 50000)
+        {
+            speed = 500;
+        }
+        else if (mileage.mileageCount >= 25000)
+        {
+            speed = 400;
+        }
+        else if (mileage.mileageCount >= mileage.Evo1)
         {
             speed = 300;
         }
