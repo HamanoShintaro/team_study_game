@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmController: {fileID: 105086707}
-  title: {fileID: 8300000, guid: 7702a5da4550445b29741dbb06a423fe, type: 3}
+  title: {fileID: 8300000, guid: 81d6ff9fdf6270343a432cedd226080d, type: 3}
   stage0101: {fileID: 8300000, guid: fa11272a941b56942ad35aab72381ef6, type: 3}
   stage0102: {fileID: 8300000, guid: 132c39ccc2f6e574bb4684ef350d4a93, type: 3}
   stage0201: {fileID: 8300000, guid: d34cae23f285d16459103378df9b188f, type: 3}
@@ -345,7 +345,7 @@ MonoBehaviour:
   stage0502: {fileID: 8300000, guid: 132c39ccc2f6e574bb4684ef350d4a93, type: 3}
   stage0601: {fileID: 8300000, guid: d34cae23f285d16459103378df9b188f, type: 3}
   stage0602: {fileID: 8300000, guid: db223895dc488754387f639f098d3048, type: 3}
-  fadeSpeed: 1
+  fadeSpeed: 0.5
 --- !u!82 &105086707
 AudioSource:
   m_ObjectHideFlags: 0
