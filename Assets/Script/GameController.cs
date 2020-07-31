@@ -31,6 +31,7 @@ namespace touch_game
         public void Start()
         {
             //ゲーム開始の音響効果
+            this.voiceController.playVoiceTitle();
             this.bgmController.StartTitleBgm();
         }
 
@@ -47,6 +48,7 @@ namespace touch_game
                 this.startMenuObj.SetActive(false);
                 this.mainStageObj.SetActive(true);
             }
+            StartCoroutine(this.bgmController.fadeOutAudio());
         }
 
         public void StartMenuShiftPictureBook()
@@ -65,7 +67,9 @@ namespace touch_game
         {
             this.resultObj.SetActive(false);
             this.startMenuObj.SetActive(true);
-            //音響設定
+
+            //ゲーム開始の音響効果
+            this.voiceController.playVoiceTitle();
             this.bgmController.StartTitleBgm();
         }
 

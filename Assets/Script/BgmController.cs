@@ -96,7 +96,7 @@ namespace touch_game
                 resetAudio();
                 bgmController.volume = 0.2f;
                 bgmController.clip = title;
-                bgmController.PlayDelayed(1.0f);
+                bgmController.PlayDelayed(2.0f);
             }
         }
 
