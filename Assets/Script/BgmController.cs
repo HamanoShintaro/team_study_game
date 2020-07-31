@@ -70,6 +70,25 @@ namespace touch_game
                 yield return new WaitForSeconds(0.02f);
             }
         }
+        public IEnumerator transitionAudio(AudioClip audioClip)
+        {
+            while (bgmController.volume > 0.0f)
+            {
+                bgmController.volume -= fadeSpeed * Time.deltaTime;
+                yield return new WaitForSeconds(0.02f);
+            }
+            bgmController.Stop();
+            resetAudio();
+
+            bgmController.clip = audioClip;
+            bgmController.Play();
+            while (bgmController.volume < 0.2f)
+            {
+                bgmController.volume += fadeSpeed * Time.deltaTime;
+                yield return new WaitForSeconds(0.02f);
+            }
+        }
+
 
         public void StartTitleBgm()
         {
@@ -83,9 +102,8 @@ namespace touch_game
 
         public void StartGameBgm(int level)
         {
-            if (bgmController.clip != stageBGM[1]) {
-                resetAudio();
-                this.StartCoroutine(this.fadeInAudio(stageBGM[1]));
+            if (bgmController.clip != stageBGM[level]) {
+                this.StartCoroutine(this.transitionAudio(stageBGM[level]));
             }
         }
 

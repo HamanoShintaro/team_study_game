@@ -30,7 +30,8 @@ namespace touch_game
 
         public void Start()
         {
-            //ゲーム環境の設定
+            //ゲーム開始の音響効果
+            this.bgmController.StartTitleBgm();
         }
 
         public void StartMenuShiftMainStage()
@@ -41,7 +42,6 @@ namespace touch_game
                 this.startMenuObj.SetActive(false);
                 this.slideShowObj.SetActive(true);
             }
-
             else
             {
                 this.startMenuObj.SetActive(false);
@@ -65,6 +65,8 @@ namespace touch_game
         {
             this.resultObj.SetActive(false);
             this.startMenuObj.SetActive(true);
+            //音響設定
+            this.bgmController.StartTitleBgm();
         }
 
         public void ResultShiftMainStage()
