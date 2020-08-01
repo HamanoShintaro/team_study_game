@@ -25,7 +25,7 @@ namespace touch_game
         public Mileage mileage;
 
         // ジャンプモーションにかかわる変数の定義
-        public float level;
+        public int level;
         public Sprite spinImage;
         public Sprite poseImage001, poseImage002, poseImage003;
         private Dictionary<int, Sprite> poseImage;
@@ -64,6 +64,7 @@ namespace touch_game
         {
                 jumpFlg = false;
                 jumpCount = 0;
+                GameController.instance.seController.playSeLanding(level);
         }
 
         void OnTriggerExit2D(Collider2D other)
@@ -101,8 +102,8 @@ namespace touch_game
             rb2d.velocity = Vector2.zero;
             rb2d.velocity = new Vector2(0.0f, flapVelocity);
             jumpCount++;
-            GameController.instance.voiceController.playVoiceJump(1);
-            GameController.instance.seController.playSeJump(1);
+            GameController.instance.voiceController.playVoiceJump(level);
+            GameController.instance.seController.playSeJump(level);
             playerImage.sprite = jump00;
 
             //空中ジャンプでキャラクターを1回転させる
@@ -135,7 +136,7 @@ namespace touch_game
         private float randomNum;
         public IEnumerator CharacterSpin() 
         {
-            if (level < 3.0f) { 
+            if (level < 2) { 
                 //Debug.Log("キャラクターを回転させます");
                 spinLoopCount = 0;
                 while (spinLoopCount < 20) { 
@@ -146,7 +147,7 @@ namespace touch_game
                 }
             }
 
-            if (level == 3.0f) {
+            if (level == 3) {
                 spinLoopCount = 0;
                 while (spinLoopCount < 8) {
                     spinLoopCount++;
@@ -155,7 +156,7 @@ namespace touch_game
                 }
             }
 
-            if (level == 4.0f)
+            if (level == 4)
             {
                 //回転中画像に切り替え
                 playerImage.sprite = spinImage;
