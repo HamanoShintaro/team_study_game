@@ -94,6 +94,16 @@ namespace touch_game
                 flap();
             }
 
+            if (Input.touchCount > 0 && jumpCount < 2)
+            {
+                Touch touch = Input.GetTouch(0);
+                if(touch.phase == TouchPhase.Began)
+                {
+                    flap();
+                }
+                
+            }
+
         }
 
         void flap()
