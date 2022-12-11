@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{7032A469-0F77-CB96-4F0D-BB51F36970C6}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Library/PackageCache/com.unity.multiplayer-hlapi@1.0.4/Editor/Tools/Weaver/AssemblyInfo.cs">
+    <Files>
+      <File FileName="Library/PackageCache/com.unity.multiplayer-hlapi@1.0.4/Editor/Tools/Weaver/AssemblyInfo.cs" Line="29" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="team_study_game" expanded="True">
+            <Node name="Assets" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1564b145-8674-4063-919d-78639eb54e1b" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
